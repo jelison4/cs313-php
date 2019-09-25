@@ -1,5 +1,36 @@
+h1{
+    text-align: center;
+}
+
 body{
     background-color:#669999;
-    width: 1000px;
+    width: 900px;
     margin: 0 auto;
   }
+
+div{
+    padding: 10px;
+}
+
+div:hover{
+    background-color: ivory;
+}
+
+button{
+    margin: 0 auto;
+}
+
+#first{
+    background-color: aqua;
+    font-size: 1cm;
+}
+
+#second{
+    background-color:forestgreen;
+    font-size: 1cm;
+}
+
+#third{
+    background-color: pink;
+    font-size: 1cm;
+}
