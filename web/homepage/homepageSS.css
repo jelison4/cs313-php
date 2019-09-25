@@ -11,7 +11,6 @@ body{
 .navbar {
   overflow: hidden;
   background-color: #333;
-  position: fixed;
   top: 0;
   width: 100%;
 }
@@ -28,4 +27,8 @@ body{
 .navbar a:hover {
   background: #ddd;
   color: black;
+}
+
+.main {
+  margin-top: 30px; /* Add a top margin to avoid content overlay */
 }
