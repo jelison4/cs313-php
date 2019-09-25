@@ -13,24 +13,24 @@ div{
 }
 
 div:hover{
-    background-color: ivory;
+    font-weight: bold;
 }
 
 button{
     margin: 0 auto;
 }
 
-#first{
+.first{
     background-color: aqua;
     font-size: 1cm;
 }
 
-#second{
+.second{
     background-color:forestgreen;
-    font-size: 1cm;
+    font-size: 20px;
 }
 
-#third{
+.third{
     background-color: pink;
-    font-size: 1cm;
+    font-size: 25px;
 }
