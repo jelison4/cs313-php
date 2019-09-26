@@ -2,6 +2,19 @@ h1{
     text-align: center;
 }
 
+p{
+  background-color:rgba(230, 230, 230,0.75);
+  border-radius: 15px;
+  text-align:center;
+}
+
+table{
+  background-color:rgba(230, 230, 230,0.75);
+  border-radius: 15px;
+  width: 1000px;
+  margin: 0 auto;
+}
+
 body{
     background-color:#39ac73;
     width: 1000px;
