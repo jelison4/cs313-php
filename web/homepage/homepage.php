@@ -1,9 +1,9 @@
 <?php 
 function getTime(){
-    date_default_timezone_set('America/Boise');
+    $currentTime=date_default_timezone_set('America/Boise');
 
-    $current_date = date('d/m/Y == H:i:s');
-    echo $current_date;
+    $currentTime = date('H:i:s');
+    echo $currentTime;
 }  
 ?>
 
@@ -27,7 +27,8 @@ function getTime(){
         <a href="https://github.com/jelison4/cs313-php">My GitHub Page for CS313</a>
     </div>
     
-    <p onload="getTime()">
+    <p>
+        <?php getTime(); ?>
     </p>
 
 </body>
