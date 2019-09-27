@@ -30,6 +30,6 @@ function getTime(){
     <p>
         <?php getTime(); ?>
     </p>
-
+    
 </body>
 </html>
