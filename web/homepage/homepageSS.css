@@ -11,8 +11,12 @@ p{
 table{
   background-color:rgba(230, 230, 230,0.75);
   border-radius: 15px;
-  width: 1000px;
+  width: 900px;
   margin: 0 auto;
+}
+
+ul{
+  list-style-position: inside;
 }
 
 body{
