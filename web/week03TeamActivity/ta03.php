@@ -6,18 +6,18 @@
         Email: <input type='text' name='email'><br>
         <p>Major:</p>
         <?php
-        $majors = array("Computer Science", "Web Design and Development", "Computer information Technology", "Computer Engineering");
-        foreach($majors as $major){
-            echo "<input type='radio' name='major' value='$major'>$major<br>";
-        }
+          $majors = array("Computer Science", "Web Design and Development", "Computer information Technology", "Computer Engineering");
+          foreach($majors as $major){
+              echo "<input type='radio' name='major' value='$major'>$major<br>";
+          }
         ?>
-        <br>
-        <textarea rows='20' cols='100' name='textarea'></textarea>
-        <br>
-        <p>Where you been bruh?</p>
+          <br>
+          <textarea rows='20' cols='100' name='textarea'></textarea>
+          <br>
+          <p>Where you been bruh?</p>
 
         <?php
-        $continentMap = array(
+          $continentMap = array(
             'NA'=>"North America",
             'SA'=>"South America",
             'EU'=>"Europe",
@@ -25,7 +25,7 @@
             'AU'=>"Australia",
             'AF'=>"Africa",
             'AN'=>"Antarctica",
-        );
+          );
 
         $continents = array('NA', 'SA', 'EU', 'AS', 'AU', 'AF', 'AN');
         foreach($continents as $continent) {
