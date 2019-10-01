@@ -7,6 +7,16 @@ $textarea = $_POST['textarea'];
 
 $continents = $_POST['cont'];
 
+$continentMap = array(
+    'NA'=>"North America",
+    'SA'=>"South America",
+    'EU'=>"Europe",
+    'AS'=>"Asia",
+    'AU'=>"Australia",
+    'AF'=>"Africa",
+    'AN'=>"Antarctica",
+);
+
 ?>
 
 <!DOCTYPE html>
@@ -19,7 +29,7 @@ $continents = $_POST['cont'];
     echo "<p>Comments: $textarea</p>";
     echo "<p>You have been to:</p>";
     foreach($continents as $continent) {
-        echo "$continent<br>";
+        echo "$continentMap[$continent]<br>";
     };
     ?>
 </body>

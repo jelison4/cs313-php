@@ -17,9 +17,19 @@
         <p>Where you been bruh?</p>
 
         <?php
+        $continentMap = array(
+            'NA'=>"North America",
+            'SA'=>"South America",
+            'EU'=>"Europe",
+            'AS'=>"Asia",
+            'AU'=>"Australia",
+            'AF'=>"Africa",
+            'AN'=>"Antarctica",
+        );
+
         $continents = array('NA', 'SA', 'EU', 'AS', 'AU', 'AF', 'AN');
         foreach($continents as $continent) {
-            echo "<input type='checkbox' name='cont[]' value='$continent'>$continent<br>";
+            echo "<input type='checkbox' name='cont[]' value='$continent'>$continentMap[$continent]<br>";
         };
         ?>
 
