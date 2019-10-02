@@ -5,7 +5,13 @@ body {
     background-size: cover;
     width: 1000px;
     margin: 0 auto;
-  }
+}
+
+h1{
+    text-align: center;
+    color: white;
+    text-shadow: 0px 0px 60px rgb(255, 51, 255);
+}
 
 table.center {
   width:70%; 
