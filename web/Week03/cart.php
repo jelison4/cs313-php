@@ -1,3 +1,19 @@
+<?php
+   $gameMap = array(
+    "Banjo-Kazooie"=>15,
+    "Chrono Trigger"=>75,
+    "Earthbound"=>150,
+    "Final Fantasy VII"=>500,
+    "The Legend of Zelda: Link to the Past"=>100,
+    "The Legend of Zelda: Ocarina of Time"=>200,
+    "Pokemon Blue"=>60,
+    "Pokemon Snap"=>15,
+    "Suikoden"=>350,
+    "Super Mario Brothers"=>450,
+    "Super Smash Brothers"=>225,
+   );
+?>
+
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
