@@ -91,12 +91,12 @@
     <?php
       $total = 0;
       
-      if(!empty($games)){
-        foreach($games as $game){
+      if(!empty($_SESSION['games'])){
+        foreach($_SESSION['games'] as $game){
           $game->display();
           $total+= $game->getPrice();
         }
-        var_dump($games);
+        var_dump($_SESSION['games']);
       }
 
       echo "<tr><td class='money' colspan=2><b>Total</b> $" . money_format('%i', $total) . "</td></tr>";
