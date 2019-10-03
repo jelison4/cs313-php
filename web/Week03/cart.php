@@ -90,9 +90,12 @@
   <tr><th>Title</th><th>Price</th>
     <?php
       $total = 0;
-      foreach($games as $game){
-        $game->display();
-        $total+= $game->getPrice();
+      
+      if(!empty($games)){
+        foreach($games as $game){
+          $game->display();
+          $total+= $game->getPrice();
+        }
       }
 
       echo "<tr><td class='money' colspan=2><b>Total</b> $" . money_format('%i', $total) . "</td></tr>";
