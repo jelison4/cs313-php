@@ -47,3 +47,7 @@ th{
 input{
     text-align: center;
 }
+
+#number {
+    width: 5px;
+  }
