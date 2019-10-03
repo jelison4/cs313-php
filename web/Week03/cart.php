@@ -39,7 +39,7 @@
 
      function display(){
       setlocale(LC_MONETARY, 'en_US');
-      echo "<tr><td>" . $this->getTitle() . "</td><td>" . money_format('%i', $this->getPrice()) . "</td></tr>";
+      echo "<tr><td>" . $this->getTitle() . "</td><td class='money'>$" . money_format('%i', $this->getPrice()) . "</td></tr>";
      }
    }
 ?>
