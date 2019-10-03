@@ -84,7 +84,7 @@
       echo "<tr><td class='money' colspan=2><b>Total</b> $" . money_format('%i', $total) . "</td></tr>";
     }
     else{
-      echo "<tr><td>Your cart is empty.</td></tr>";
+      echo "<tr><td style='text-align: center'>Your cart is empty.</td></tr>";
     }
     ?>
 </table>
