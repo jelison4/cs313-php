@@ -71,6 +71,8 @@
 <table>
   <tr><th>Title</th><th>Price</th>
     <?php
+
+    if(!empty($_SESSION['games'])){
       $total = 0;
       
       if(!empty($_SESSION['games'])){
@@ -79,8 +81,11 @@
           $total+= $game->getPrice();
         }
       }
-
       echo "<tr><td class='money' colspan=2><b>Total</b> $" . money_format('%i', $total) . "</td></tr>";
+    }
+    else{
+      echo "Your cart is empty.";
+    }
     ?>
 </table>
 </body>
