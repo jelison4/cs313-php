@@ -99,7 +99,7 @@
     }
     ?>
 
-    <tr><form><td><button type="submit" formaction="items.php">Return to Browse</button></td><td><button type="submit" formaction="checkout.php">Checkout</button></td></form></tr>
+    <tr><form><td><button type="submit" formaction="items.php">Return to Browse</button></td><td colspan=2><button type="submit" formaction="checkout.php">Checkout</button></td></form></tr>
 </table>
 </body>
 </html>
