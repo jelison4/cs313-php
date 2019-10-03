@@ -5,8 +5,8 @@
      public $quantity;
 
      function Game(){
-      $this->title = $_POST["title"];
-      $this->quantity = $_POST["quantity"];
+      $this->title = $_GET["title"];
+      $this->quantity = $_GET["quantity"];
 
       $priceMap = array(
        "Banjo-Kazooie"=>15.00,
