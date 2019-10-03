@@ -93,25 +93,36 @@
   <h1>Shopping Cart</h1>
 <table>
     <?php
+    // Check to see if anything is in the cart
     if(!empty($_SESSION['games'])){
       $total = 0;
       
+      // Display header row of table
       echo "<tr><th>Title</th><th>Quantity</th><th>Price</th></tr>";
 
-      if(!empty($_SESSION['games'])){
-        foreach($_SESSION['games'] as $game){
-          $game->display();
-          $total+= ($game->getPrice()*$game->getQuantity());
-        }
+      // Loop through array and display each entry
+      foreach($_SESSION['games'] as $game){
+        $game->display();
+
+        // Add the price of each game to the total
+        $total+= ($game->getPrice()*$game->getQuantity());
       }
-      echo "<tr><td class='money' colspan=3><b>Total</b> $" . money_format('%i', $total) . "</td></tr>";
+
+      // Display total at the bottom
+      echo "<tr><td class='money' colspan=3><b>Total</b> $" . money_format('%i', $total) . "</td></tr>
+            <tr>
+              <form>
+                <td><button type='submit' formaction='items.php'>Return to Browse</button></td>
+                <td colspan=2 style='text-align:right'><button type='submit' formaction='checkout.php'>Checkout</button></td>
+              </form></tr>";
     }
+
+    // It the cart is empty display message
     else{
-      echo "<tr><td style='text-align: center'>Your cart is empty.</td></tr>";
+      echo "<tr><td style='text-align: center'><br>Your cart is empty.<br></td></tr>
+            <tr><form><td><button type='submit' formaction='items.php'>Return to Browse</button></td></tr>";
     }
     ?>
-
-    <tr><form><td><button type="submit" formaction="items.php">Return to Browse</button></td><td colspan=2 style="text-align:right"><button type="submit" formaction="checkout.php">Checkout</button></td></form></tr>
 </table>
 </body>
 </html>
