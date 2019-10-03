@@ -69,12 +69,12 @@
 <body>
   <h1>Shopping Cart</h1>
 <table>
-  <tr><th>Title</th><th>Price</th>
     <?php
-
     if(!empty($_SESSION['games'])){
       $total = 0;
       
+      echo "<tr><th>Title</th><th>Price</th></tr>";
+
       if(!empty($_SESSION['games'])){
         foreach($_SESSION['games'] as $game){
           $game->display();
@@ -84,7 +84,7 @@
       echo "<tr><td class='money' colspan=2><b>Total</b> $" . money_format('%i', $total) . "</td></tr>";
     }
     else{
-      echo "Your cart is empty.";
+      echo "<tr><td>Your cart is empty.</td></tr>";
     }
     ?>
 </table>
