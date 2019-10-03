@@ -68,11 +68,11 @@
 
    $game = new Game();
 
-   if(!empty($games)){
-     array_push($games, $game);
+   if(!empty($_SESSION['games'])){
+    array_push($_SESSION['games'], $game);
    }
    else{
-     $games = array($game);
+    $_SESSION['games'] = array($game);
    }
 ?>
 
