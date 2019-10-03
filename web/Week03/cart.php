@@ -60,9 +60,14 @@
       $ChronoTrigger = new Game("Chrono Trigger", 1);
       $Earthbound = new Game("Earthbound",1);
       $games = array($ChronoTrigger, $Earthbound);
+
+      $total = 0;
       foreach($games as $game){
         $game->display();
+        $total+= $game->getPrice();
       }
+
+      echo "<tr><td class='money' colspan=2>$" . money_format('%i', $this->getPrice()) . "</td></tr>";
     ?>
 </table>
 </body>
