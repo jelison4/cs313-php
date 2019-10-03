@@ -80,8 +80,12 @@
     }
    }
 
-   function removeFromCart($game){
-    $_SESSION['games'] =\array_diff($_SESSION['games'], [$game]);
+   function removeFromCart($title){
+     foreach($_SESSION['games'] as $game){
+       if($game->getTitle()==$title){
+        $_SESSION['games'] = \array_diff($_SESSION['games'], [$game]);
+       }
+      }
    }   
 ?>
 
