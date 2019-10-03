@@ -38,7 +38,7 @@
       }
 
       function addQuantity($num){
-        this->quantity+=$num;
+        $this->quantity+=$num;
       }
 
      function display(){
@@ -54,7 +54,7 @@
    if($game->getPrice() != 0){
     if(!empty($_SESSION['games'])){
       foreach($_SESSION['games'] as $igames){
-        if($game->getTitle()==$igames->getTitle()){
+        if($game->getTitle()===$igames->getTitle()){
           $igames->addQuantity($game->getQuantity());
         }
         else{
