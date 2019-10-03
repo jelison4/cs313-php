@@ -58,7 +58,11 @@
   <tr><th>Title</th><th>Price</th>
     <?php
       $ChronoTrigger = new Game("Chrono Trigger", 1);
-      $ChronoTrigger->display();
+      $Earthbound = new Game("Earthbound",1);
+      $games = array($ChronoTrigger, $Earthbound);
+      foreach($games as $game){
+        $game->display();
+      }
     ?>
 </table>
 </body>
