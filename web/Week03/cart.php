@@ -37,6 +37,10 @@
         return $this->quantity;
       }
 
+      function addQuantity($num){
+        this->quantity+=$num;
+      }
+
      function display(){
       setlocale(LC_MONETARY, 'en_US');
       echo "<tr><td style='text-align: center'>" . $this->getTitle() . "</td><td class='money'>$" . money_format('%i', $this->getPrice()*$this->getQuantity()) . "</td></tr>";
@@ -49,7 +53,14 @@
 
    if($game->getPrice() != 0){
     if(!empty($_SESSION['games'])){
-      array_push($_SESSION['games'], $game);
+      foreach($_SESSION['games'] as $igames){
+        if($game->getTitle()==$igames->getTitle()){
+          $igames->addQuantity($game->getQuantity());
+        }
+        else{
+          array_push($_SESSION['games'], $game);
+        }
+      }
      }
      else{
       $_SESSION['games'] = array($game);
