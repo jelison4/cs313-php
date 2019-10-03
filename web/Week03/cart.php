@@ -47,7 +47,7 @@
 
    $game = new Game();
 
-   if($game->getPrice != 0){
+   if($game->getPrice() != 0){
     if(!empty($_SESSION['games'])){
       array_push($_SESSION['games'], $game);
      }
