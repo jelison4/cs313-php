@@ -65,7 +65,7 @@
 <h1>The Game Place</h1>
 <br>
 <table>
-    <tr><th>Game</th>                                 <th>Platform</th>             <th>Price</th><th></th></tr>
+    <tr><th>Game</th>                                 <th>Platform</th>             <th>Price</th><th>Quantitiy</th></tr>
     <?php displayTable(); ?>
     <!-- 
     <tr><td>Banjo-Kazooie</td>                        <td>N64</td>    <td class="money">$15.00</td><form><td style="text-align:center"><input type="text" maxlength="2" size="1" id="BK"></td></td><td><button onclick="addToCart('Banjo-Kazooie',1)">Add to Cart</button></td></form></tr>
