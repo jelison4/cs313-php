@@ -43,7 +43,7 @@
 
      function display(){
       setlocale(LC_MONETARY, 'en_US');
-      echo "<tr><td style='text-align: center'>" . $this->getTitle() . "</td><td>" . $this->getQuantity() . "<td class='money'>$" . money_format('%i', $this->getPrice()*$this->getQuantity()) . "</td></tr>";
+      echo "<tr><td style='text-align: center'>" . $this->getTitle() . "</td><td style='text-align: center'>" . $this->getQuantity() . "<td class='money'>$" . money_format('%i', $this->getPrice()*$this->getQuantity()) . "</td></tr>";
      }
    }
 
@@ -92,7 +92,7 @@
           $total+= ($game->getPrice()*$game->getQuantity());
         }
       }
-      echo "<tr><td class='money' colspan=2><b>Total</b> $" . money_format('%i', $total) . "</td></tr>";
+      echo "<tr><td class='money' colspan=3><b>Total</b> $" . money_format('%i', $total) . "</td></tr>";
     }
     else{
       echo "<tr><td style='text-align: center'>Your cart is empty.</td></tr>";
