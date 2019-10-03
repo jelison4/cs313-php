@@ -1,5 +1,5 @@
 function addToCart(game, quantity){
-    var QString='cart.php?title="' + game + '"&quantity=' + quantity;
+    var QString='cart.php?title=' + game + '&quantity=' + quantity;
     console.log(QString);
     
     var xhr = new XMLHttpRequest();
