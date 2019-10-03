@@ -46,7 +46,7 @@
       echo '<tr><td>'. $game .'</td>
                 <td>'. $platformMap[$game] .'</td>
                 <td class="money">$'.$priceMap[$game].'</td>
-                <td style="text-align:center"><input type="text" maxlength="2" size="1" id="'.$game.'Quant"></td>
+                <td style="text-align:center"><input type="text" value="1" maxlength="2" size="1" id="'.$game.'Quant"></td>
                 <td><button onclick="addToCart("'. $game .'")">Add to Cart</button></td></tr>';
     }
   }
