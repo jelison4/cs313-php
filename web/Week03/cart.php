@@ -78,7 +78,7 @@
       if(!empty($_SESSION['games'])){
         foreach($_SESSION['games'] as $game){
           $game->display();
-          $total+= $game->getPrice();
+          $total+= ($game->getPrice()*$game->getQuantity());
         }
       }
       echo "<tr><td class='money' colspan=2><b>Total</b> $" . money_format('%i', $total) . "</td></tr>";
