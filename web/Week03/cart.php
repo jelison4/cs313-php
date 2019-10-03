@@ -67,7 +67,7 @@
         $total+= $game->getPrice();
       }
 
-      echo "<tr><td class='money' colspan=2>$" . money_format('%i', $total) . "</td></tr>";
+      echo "<tr><td class='money' colspan=2>Total   $" . money_format('%i', $total) . "</td></tr>";
     ?>
 </table>
 </body>
