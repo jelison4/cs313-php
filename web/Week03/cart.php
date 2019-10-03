@@ -24,39 +24,18 @@
 
       $this->price = $priceMap[$this->title];
      }
-/*
-     function __construct($title, $quantity){
-       $this->title = $title;
-       $this->quantity = $quantity;
 
-       $priceMap = array(
-        "Banjo-Kazooie"=>15.00,
-        "Chrono Trigger"=>75.00,
-        "Earthbound"=>150.00,
-        "Final Fantasy VII"=>500.00,
-        "The Legend of Zelda: Link to the Past"=>100.00,
-        "The Legend of Zelda: Ocarina of Time"=>200.00,
-        "Pokemon Blue"=>60.00,
-        "Pokemon Snap"=>15.00,
-        "Suikoden"=>350.00,
-        "Super Mario Brothers"=>450.00,
-        "Super Smash Brothers"=>225.00
-       );
+      function getTitle(){
+        return $this->title;
+      }
 
-       $this->price = $priceMap[$title];
-     }
-*/
-     function getTitle(){
-       return $this->title;
-     }
+      function getPrice(){
+        return $this->price;
+      }
 
-     function getPrice(){
-      return $this->price;
-    }
-
-    function getQuantity(){
-      return $this->quantity;
-    }
+      function getQuantity(){
+        return $this->quantity;
+      }
 
      function display(){
       setlocale(LC_MONETARY, 'en_US');
@@ -68,12 +47,15 @@
 
    $game = new Game();
 
-   if(!empty($_SESSION['games'])){
-    array_push($_SESSION['games'], $game);
+   if($game->getPrice != 0){
+    if(!empty($_SESSION['games'])){
+      array_push($_SESSION['games'], $game);
+     }
+     else{
+      $_SESSION['games'] = array($game);
+     }
    }
-   else{
-    $_SESSION['games'] = array($game);
-   }
+   
 ?>
 
 <!DOCTYPE html>
