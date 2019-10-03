@@ -88,7 +88,7 @@
     }
     ?>
 
-    <tr><td><button onclick="items.php">Return to Browse</button></td><td><button>Checkout</button></td></tr>
+    <tr><form><td><button type="submit" formaction="items.php">Return to Browse</button></td><td><button type="submit" formaction="items.php">Checkout</button></td></form></tr>
 </table>
 </body>
 </html>
