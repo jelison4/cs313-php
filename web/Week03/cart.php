@@ -4,6 +4,27 @@
      public $price;
      public $quantity;
 
+     function Game(){
+      $this->title = $_POST["title"];
+      $this->quantity = $_POST["quantity"];
+
+      $priceMap = array(
+       "Banjo-Kazooie"=>15.00,
+       "Chrono Trigger"=>75.00,
+       "Earthbound"=>150.00,
+       "Final Fantasy VII"=>500.00,
+       "The Legend of Zelda: Link to the Past"=>100.00,
+       "The Legend of Zelda: Ocarina of Time"=>200.00,
+       "Pokemon Blue"=>60.00,
+       "Pokemon Snap"=>15.00,
+       "Suikoden"=>350.00,
+       "Super Mario Brothers"=>450.00,
+       "Super Smash Brothers"=>225.00
+      );
+
+      $this->price = $priceMap[$this->title];
+     }
+/*
      function __construct($title, $quantity){
        $this->title = $title;
        $this->quantity = $quantity;
@@ -24,7 +45,7 @@
 
        $this->price = $priceMap[$title];
      }
-
+*/
      function getTitle(){
        return $this->title;
      }
@@ -42,6 +63,17 @@
       echo "<tr><td>" . $this->getTitle() . "</td><td class='money'>$" . money_format('%i', $this->getPrice()) . "</td></tr>";
      }
    }
+
+   session_start();
+
+   $game = new Game();
+
+   if(!empty($games)){
+     array_push($games, $game);
+   }
+   else{
+     $games = array($game);
+   }
 ?>
 
 <!DOCTYPE html>
@@ -57,17 +89,13 @@
 <table>
   <tr><th>Title</th><th>Price</th>
     <?php
-      $ChronoTrigger = new Game("Chrono Trigger", 1);
-      $Earthbound = new Game("Earthbound",1);
-      $games = array($ChronoTrigger, $Earthbound);
-
       $total = 0;
       foreach($games as $game){
         $game->display();
         $total+= $game->getPrice();
       }
 
-      echo "<tr><td class='money' colspan=2><b>Total</b>       $" . money_format('%i', $total) . "</td></tr>";
+      echo "<tr><td class='money' colspan=2><b>Total</b> $" . money_format('%i', $total) . "</td></tr>";
     ?>
 </table>
 </body>
