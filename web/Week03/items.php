@@ -29,7 +29,7 @@
     ); 
 
     foreach($titles as $game){
-      echo '<tr><td>' . $game . '</td><td class="money">$'. $priceMap[$game] .'</td><form><td style="text-align:center"><input type="text" maxlength="2" size="1" id="'. $game .'Qant"></td></td><td><button onclick="addToCart('. $game .')">Add to Cart</button></td></form></tr>';
+      echo '<tr><td>' . $game . '</td><td class="money">$'. $priceMap[$game] .'</td><td><button onclick="addToCart('. $game .',1)">Add to Cart</button></td></tr>';
     }
   }
 ?>

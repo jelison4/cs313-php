@@ -1,11 +1,9 @@
-function addToCart(game){
-  var quantity = document.getElementById(game+'Qant').value;
-  console.log(quantity);
-
+function addToCart(game, quantity){
   var QString='cart.php?title=' + game + '&quantity=' + quantity;
+
   console.log(QString);
+
   var xhr = new XMLHttpRequest();
-    
   xhr.onreadystatechange = function(){
     if (xhr.readyState==4 && xhr.status==200){
     }
