@@ -26,10 +26,28 @@
       "Suikoden"=>350.00,
       "Super Mario Brothers"=>450.00,
       "Super Smash Brothers"=>225.00
-    ); 
+    );
+
+    $platformMap = array(
+      "Banjo-Kazooie"=>"N64",
+      "Chrono Trigger"=>"SNES",
+      "Earthbound"=>"SNES",
+      "Final Fantasy VII"=>"PS1",
+      "The Legend of Zelda: Link to the Past"=>"SNES",
+      "The Legend of Zelda: Ocarina of Time"=>"N64",
+      "Pokemon Blue"=>"Gameboy",
+      "Pokemon Snap"=>"N64",
+      "Suikoden"=>"PS1",
+      "Super Mario Brothers"=>"SNES",
+      "Super Smash Brothers"=>"N64"
+    );
 
     foreach($titles as $game){
-      echo '<tr><td>' . $game . '</td><td class="money">$'. $priceMap[$game] .'</td><td><button onclick="addToCart('. $game .',1)">Add to Cart</button></td></tr>';
+      echo '<tr><td>'. $game .'</td>
+                <td>'. $platformMap[$game] .'</td>
+                <td class="money">$'.$priceMap[$game].'</td>
+                <td style="text-align:center"><input type="text" maxlength="2" size="1" id="'.$game.'Quant"></td>
+                <td><button onclick="addToCart('. $game .',1)">Add to Cart</button></td></tr>';
     }
   }
 ?>
@@ -47,7 +65,7 @@
 <h1>The Game Place</h1>
 <br>
 <table>
-    <tr><th>Game</th>                                 <th>Price</th>             <th>Quantity</th><th></th></tr>
+    <tr><th>Game</th>                                 <th>Platform</th>             <th>Price</th><th></th></tr>
     <?php displayTable(); ?>
     <!-- 
     <tr><td>Banjo-Kazooie</td>                        <td>N64</td>    <td class="money">$15.00</td><form><td style="text-align:center"><input type="text" maxlength="2" size="1" id="BK"></td></td><td><button onclick="addToCart('Banjo-Kazooie',1)">Add to Cart</button></td></form></tr>

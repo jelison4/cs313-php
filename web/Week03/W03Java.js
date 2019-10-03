@@ -1,4 +1,8 @@
-function addToCart(game, quantity){
+function addToCart(game){
+  var quantityID = game + "Quant"
+  var quantity = document.getElementById(quantityID).value;
+  console.log(quantityID);
+  console.log(quantity);
   var QString='cart.php?title=' + game + '&quantity=' + quantity;
 
   console.log(QString);
