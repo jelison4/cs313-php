@@ -53,13 +53,18 @@
 
    if($game->getPrice() != 0){
     if(!empty($_SESSION['games'])){
+      
+      $inArray=false;
+
       foreach($_SESSION['games'] as $igames){
         if($game->getTitle()==$igames->getTitle()){
+          $inArray=true;
           $igames->addQuantity($game->getQuantity());
         }
-        else{
-          array_push($_SESSION['games'], $game);
-        }
+      }
+
+      if(!$inArray){
+        array_push($_SESSION['games'], $game);
       }
      }
      else{
