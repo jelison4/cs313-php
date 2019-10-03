@@ -43,7 +43,8 @@
 
      function display(){
       setlocale(LC_MONETARY, 'en_US');
-      echo "<tr><td style='text-align: center'>" . $this->getTitle() . "</td><td style='text-align: center'>" . $this->getQuantity() . "<td class='money'>$" . money_format('%i', $this->getPrice()*$this->getQuantity()) . "</td></tr>";
+      echo "<tr><td style='text-align: center'>" . $this->getTitle() . "</td><td style='text-align: center'>" . $this->getQuantity() . 
+           "<td class='money'>$" . money_format('%i', $this->getPrice()*$this->getQuantity()) . "</td><td><button onclick='removeFromCart($this)'>Remove</button></tr>";
      }
    }
 
@@ -78,7 +79,10 @@
       $_SESSION['games'] = array($game);
     }
    }
-   
+
+   function removeFromCart($game){
+    $_SESSION['games'] =\array_diff($_SESSION['games'], [$game]);
+   }   
 ?>
 
 <!DOCTYPE html>
