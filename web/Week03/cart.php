@@ -43,7 +43,7 @@
 
      function display(){
       setlocale(LC_MONETARY, 'en_US');
-      echo "<tr><td style='text-align: center'>" . $this->getTitle() . "</td><td class='money'>$" . money_format('%i', $this->getPrice()*$this->getQuantity()) . "</td></tr>";
+      echo "<tr><td style='text-align: center'>" . $this->getTitle() . "</td><td>" . $this->getQuantity() . "<td class='money'>$" . money_format('%i', $this->getPrice()*$this->getQuantity()) . "</td></tr>";
      }
    }
 
@@ -84,7 +84,7 @@
     if(!empty($_SESSION['games'])){
       $total = 0;
       
-      echo "<tr><th>Title</th><th>Price</th></tr>";
+      echo "<tr><th>Title</th><th>Quantity</th><th>Price</th></tr>";
 
       if(!empty($_SESSION['games'])){
         foreach($_SESSION['games'] as $game){
