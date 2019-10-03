@@ -96,7 +96,6 @@
           $game->display();
           $total+= $game->getPrice();
         }
-        var_dump($_SESSION['games']);
       }
 
       echo "<tr><td class='money' colspan=2><b>Total</b> $" . money_format('%i', $total) . "</td></tr>";
