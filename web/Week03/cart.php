@@ -87,6 +87,8 @@
       echo "<tr><td style='text-align: center'>Your cart is empty.</td></tr>";
     }
     ?>
+
+    <tr><td><button onclick="items.php">Return to Browse</button></td><td><button>Checkout</button></td></tr>
 </table>
 </body>
 </html>

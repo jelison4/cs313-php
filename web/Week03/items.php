@@ -16,7 +16,7 @@
 <br>
 <table>
     <tr><th>Game</th>                                 <th>Platform</th>             <th>Price</th><th></th></tr>
-    <tr><td>Banjo-Kazooie</td>                        <td>N64</td>    <td class="money">$15.00</td><td class="buttonCell"><button onclick="addToCart('Banjo-Kazooie',2)">Add to Cart</button></td></tr>
+    <tr><td>Banjo-Kazooie</td>                        <td>N64</td>    <td class="money">$15.00</td><td class="buttonCell"><button onclick="addToCart('Banjo-Kazooie',1)">Add to Cart</button></td></tr>
     <tr><td>Chrono Trigger</td>                       <td>SNES</td>   <td class="money">$75.00</td><td class="buttonCell"><button onclick="addToCart('Chrono Trigger',1)">Add to Cart</button></td></tr>
     <tr><td>Earthbound</td>                           <td>SNES</td>   <td class="money">$150.00</td><td class="buttonCell"><button onclick="addToCart('Earthbound',1)">Add to Cart</button></td></tr>
     <tr><td>Final Fantasy VII</td>                    <td>PS1</td>    <td class="money">$500.00</td><td class="buttonCell"><button onclick="addToCart('Final Fantasy VII',1)">Add to Cart</button></td></tr>
