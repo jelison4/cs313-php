@@ -47,29 +47,36 @@
      }
    }
 
-   session_start();
+  session_start();
 
-   $game = new Game();
+  $game = new Game();
 
-   if($game->getPrice() != 0){
+  if($game->getPrice() != 0){
+    // Check if the games array is empty
     if(!empty($_SESSION['games'])){
-      
+      //initialize veriable for if the game is already in the array
       $inArray=false;
 
+      // Loop through the array and check to see if the game is already in the array
       foreach($_SESSION['games'] as $igames){
+        // Check titles against eachother 
         if($game->getTitle()==$igames->getTitle()){
+          // If a duplacate is found set inArray as true and add the quantitys together
           $inArray=true;
           $igames->addQuantity($game->getQuantity());
         }
       }
 
+      // If the game isn't in the array add it
       if(!$inArray){
         array_push($_SESSION['games'], $game);
       }
-     }
-     else{
+    }
+
+    // If the games array is empty create it with the first game
+    else{
       $_SESSION['games'] = array($game);
-     }
+    }
    }
    
 ?>

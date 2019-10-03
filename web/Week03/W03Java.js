@@ -1,13 +1,13 @@
-function addToCart(game, quantity){
-    var QString='cart.php?title=' + game + '&quantity=' + quantity;
-    console.log(QString);
+function addToCart(game){
+  var quantity = document.getElementById(game+'Qant').value;
+
+  var QString='cart.php?title=' + game + '&quantity=' + quantity;
+  var xhr = new XMLHttpRequest();
     
-    var xhr = new XMLHttpRequest();
-    
-      xhr.onreadystatechange = function(){
-        if (xhr.readyState==4 && xhr.status==200){
-        }
+  xhr.onreadystatechange = function(){
+    if (xhr.readyState==4 && xhr.status==200){
     }
-    xhr.open("POST", QString, true);
-    xhr.send();
+  }
+  xhr.open("POST", QString, true);
+  xhr.send();
 }

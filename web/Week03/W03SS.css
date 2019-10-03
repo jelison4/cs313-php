@@ -43,3 +43,7 @@ th{
 .buttonCell{
     padding-left: 10px;
 }
+
+input{
+    text-align: center;
+}
