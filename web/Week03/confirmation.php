@@ -9,10 +9,8 @@
     $_SESSION['games'] = [];
    }
 
-   print_r( $_SESSION );
-
   function displayAddress(){
-    echo '<p>'.$_POST["address"].'<br>'. $_POST["city"] .", ". $_POST["State"] ." ". $_POST["zip"] . '</p>';
+    echo $_POST["address"].'<br>'. $_POST["city"] .", ". $_POST["State"] ." ". $_POST["zip"];
   }
 ?>
 
@@ -25,12 +23,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <?php 
-      displayAddress();
-      foreach($_SESSION['games'] as $game){
-        $game->display();
-      }
-    ?>
+    <p>
+        Please confirm that your address is <br>
+        <?php displayAddress(); ?>
+    and that you ordered:
     <table>
       <tr><th>Title</th><th>Quantity</th><th>Price</th></tr>
       <?php
@@ -39,5 +35,6 @@
         }   
       ?>
     </table>
+    </p>
 </body>
 </html>
