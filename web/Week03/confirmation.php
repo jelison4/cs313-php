@@ -7,7 +7,7 @@
 
   function displayAddress(){
       echo '</p>'. $_SESSION["address"] . "<br>".
-           $_SESSION["city"] .", ". $_SESSION["State"] ." ". $_SESSION["zip"] '</p>';
+           $_SESSION["city"] .", ". $_SESSION["State"] ." ". $_SESSION["zip"] . '</p>';
   }
 ?>
 
