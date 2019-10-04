@@ -6,8 +6,8 @@
   $_SESSION["zip"]=$_POST["zip"];
 
   function displayAddress(){
-      echo '</p> $_SESSION["address"] . "<br>".
-           $_SESSION["city"] .", ". $_SESSION["State"] ." ". $_SESSION["zip"] </p>';
+      echo '</p>'. $_SESSION["address"] . "<br>".
+           $_SESSION["city"] .", ". $_SESSION["State"] ." ". $_SESSION["zip"] '</p>';
   }
 ?>
 
