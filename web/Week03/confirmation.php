@@ -1,6 +1,8 @@
 <?php
   session_start();
 
+  $_SESSION['games'];
+
   function displayAddress(){
     echo '<p>'.$_POST["address"].'<br>'. $_POST["city"] .", ". $_POST["State"] ." ". $_POST["zip"] . '</p>';
   }
@@ -15,6 +17,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <?php displayAddress(); ?>
+    <?php 
+      displayAddress();
+      foreach($_SESSION['games'] as $game){
+        $game->display();
+      }
+    ?>
 </body>
 </html>
