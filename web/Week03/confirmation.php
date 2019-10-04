@@ -31,5 +31,13 @@
         $game->display();
       }
     ?>
+    <table>
+      <tr><th>Title</th><th>Quantity</th><th>Price</th></tr>
+      <?php
+        foreach($_SESSION['games'] as $game){
+          $game->display();
+        }   
+      ?>
+    </table>
 </body>
 </html>
