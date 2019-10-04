@@ -37,6 +37,10 @@ table{
     text-align: left;
 }
 
+table.checkout{
+  width: 10px;
+}
+
 th{
     text-align: center;
 }
