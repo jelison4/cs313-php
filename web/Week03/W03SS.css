@@ -37,8 +37,8 @@ table{
     text-align: left;
 }
 
-table.checkout{
-  width: 10px;
+.checkout{
+  width: 45%;
 }
 
 th{

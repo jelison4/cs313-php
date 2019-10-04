@@ -68,6 +68,7 @@
         $total+= ($game->getPrice()*$game->getQuantity());
       }
 
+      $_SESSION['total']=$total;
       $sGames= serialize($_SESSION['games']);
       file_put_contents('cart', $sGames);
 
