@@ -14,10 +14,12 @@
   <h1>Checkout</h1>
 
   <form>
-      Address: <input type="text" id="address"><br>
-      City: <input type="text" id="city"><br>
-      State: <input type="text" id="State"><br>
-      Zip Code: <input type="text" id="zip"><br>
+      <table>
+        <tr><td>Address:</td><td><input type="text" id="address"></td></tr>
+        <tr><td>City:</td><td><input type="text" id="city"></td></tr>
+        <tr><td>State:</td><td><input type="text" id="State"></td></tr>
+        <tr><td>Zip Code:</td><td><input type="text" id="zip"></td></tr>
+      </table>
   </form>
 </body>
 </html>
