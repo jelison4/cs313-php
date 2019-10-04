@@ -21,6 +21,7 @@
 </head>
 <body>
     <p>
+        does this work?
       <?php displayAddress(); ?>
     </p>
 </body>
