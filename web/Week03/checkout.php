@@ -1,7 +1,3 @@
-<?php
-   
-?>
-
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
@@ -19,7 +15,7 @@
         <tr><td>City:</td><td><input type="text" name="city"></td></tr>
         <tr><td>State:</td><td><input type="text" name="State" maxlength="2" style="text-transform: uppercase;"></td></tr>
         <tr><td>Zip Code:</td><td><input type="text" name="zip"></td></tr>
-        <tr><td colspan="2"><input type="submit" value="Complete Order"> </td></tr>
+        <tr><td></td><td><input type="submit" value="Complete Order"> </td></tr>
       </table>
   </form>
 </body>
