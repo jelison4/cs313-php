@@ -10,7 +10,7 @@
     $city=$_POST["city"];
     $State=$_POST["State"];
     $zip=$_POST["zip"];
-    echo '</p>'. $address . "<br>".
+    echo '<p>'. $address . "<br>".
           $city .", ". $State ." ". $zip . '</p>';
   }
 ?>
