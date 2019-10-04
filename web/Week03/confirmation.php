@@ -1,5 +1,9 @@
 <?php
+  include ('game.php');
   session_start();
+
+  $sGames=file_get_contents('cart');
+  $_SESSION['games']=unserialize($sGames);
 
   if (!isset($_SESSION['games'])) {
     $_SESSION['games'] = [];
