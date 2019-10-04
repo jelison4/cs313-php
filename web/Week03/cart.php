@@ -62,7 +62,7 @@
 
       // Loop through array and display each entry
       foreach($_SESSION['games'] as $game){
-        $game->display();
+        $game->displayCart();
 
         // Add the price of each game to the total
         $total+= ($game->getPrice()*$game->getQuantity());

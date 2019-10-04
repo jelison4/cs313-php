@@ -30,8 +30,6 @@
       foreach($_SESSION['games'] as $game){
         $game->display();
       }
-
-      var_dump($_SESSION['games']);
     ?>
 </body>
 </html>

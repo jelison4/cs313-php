@@ -41,7 +41,7 @@ class Game{
         $this->quantity+=$num;
       }
 
-     function display(){
+     function displayCart(){
       setlocale(LC_MONETARY, 'en_US');
       echo "<tr><td style='text-align: center'>" . $this->getTitle() . "</td><td style='text-align: center'>" . $this->getQuantity() . 
             "<td class='money'>$" . money_format('%i', $this->getPrice()*$this->getQuantity()) . "</td><td><button onclick='removeFromCart(".'"'.$this->getTitle().'"'.")'>Remove</button></td></tr>";
