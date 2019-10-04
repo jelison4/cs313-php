@@ -37,7 +37,7 @@
         foreach($_SESSION['games'] as $game){
           $game->display();
         }
-        echo "<tr><td class='money' colspan=3><b>Total</b> $" . money_format('%i', $_SESSION['total']) . "</td></tr>;   
+        echo "<tr><td class='money' colspan=3><b>Total</b> $" . money_format('%i', $_SESSION['total']) . "</td></tr>";   
       ?>
     </table>
     
