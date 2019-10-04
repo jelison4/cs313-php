@@ -12,5 +12,12 @@
 </head>
 <body>
   <h1>Checkout</h1>
+
+  <form>
+      Address: <input type="text" id="address"><br>
+      City: <input type="text" id="city"><br>
+      State: <input type="text" id="State"><br>
+      Zip Code: <input type="text" id="zip"><br>
+  </form>
 </body>
 </html>

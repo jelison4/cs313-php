@@ -1,11 +1,10 @@
 function addToCart(game){
+  //Grab quantity from the items page
   var quantityID = game + "Quant"
   var quantity = document.getElementById(quantityID).value;
-  console.log(quantityID);
-  console.log(quantity);
-  var QString='cart.php?title=' + game + '&quantity=' + quantity;
 
-  console.log(QString);
+  //Create query string
+  var QString='cart.php?title=' + game + '&quantity=' + quantity;
 
   var xhr = new XMLHttpRequest();
   xhr.onreadystatechange = function(){
