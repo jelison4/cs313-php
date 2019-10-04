@@ -25,7 +25,7 @@
 <body>
   <h1>Thank You for your Order</h1>
     <div class='background' style="text-align:center">  
-        Your order will be shipped to:
+        Your order will be shipped to:<br>
         <?php displayAddress(); ?>
         <br>
     <br>
