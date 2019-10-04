@@ -5,6 +5,8 @@
     $_SESSION['games'] = [];
    }
 
+   print_r( $_SESSION );
+
   function displayAddress(){
     echo '<p>'.$_POST["address"].'<br>'. $_POST["city"] .", ". $_POST["State"] ." ". $_POST["zip"] . '</p>';
   }
