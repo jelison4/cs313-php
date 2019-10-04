@@ -23,12 +23,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <p>
+    <p style="text-align:center">
         Please confirm that your address is <br>
         <?php displayAddress(); ?>
+        <button onclick="checkout.php">Change</button>
     </p>
-    <br>and that you ordered:
+    <br>
     <table>
+      <tr><td colspan='3'>and that you ordered:</td></td>
       <tr><th>Title</th><th>Quantity</th><th>Price</th></tr>
       <?php
         foreach($_SESSION['games'] as $game){
