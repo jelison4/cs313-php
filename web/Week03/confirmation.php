@@ -26,6 +26,7 @@
     <p style="text-align:center">
         Please confirm that your address is <br>
         <?php displayAddress(); ?>
+        <br>
         <button onclick="checkout.php">Change</button>
     </p>
     <br>
