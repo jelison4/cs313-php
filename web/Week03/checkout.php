@@ -15,7 +15,7 @@
 
   <form action="confirmation.php" method="POST">
       <table>
-        <tr><td>Address:</td><td><input type="text" id="address"></td></tr>
+        <tr><td>Address:</td><td><input type="text" name="address"></td></tr>
         <tr><td>City:</td><td><input type="text" id="city"></td></tr>
         <tr><td>State:</td><td><input type="text" id="State" maxlength="2" style="text-transform: uppercase;"></td></tr>
         <tr><td>Zip Code:</td><td><input type="text" id="zip"></td></tr>

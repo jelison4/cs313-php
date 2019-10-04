@@ -1,11 +1,9 @@
 <?php
   session_start();
-  $_SESSION['address']=$_GET["address"];
+  $_SESSION['address']=$_POST["address"];
   $_SESSION['city']=$_POST["city"];
   $_SESSION['state']=$_POST["State"];
   $_SESSION['zip']=$_POST["zip"];
-
-  setcookie("address", $_GET["address"], time() + (86400 * 30), "/");
 
   function displayAddress(){
     echo '<p>'.$_COOKIE["address"].'<br>'. $_SESSION['city'] .", ". $_SESSION['state'] ." ". $_SESSION['zip'] . '</p>';
