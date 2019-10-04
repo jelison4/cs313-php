@@ -2,7 +2,7 @@
   session_start();
 
   function displayAddress(){
-    echo '<p>'.$_SESSION["address"].'<br>'. $_POST["city"] .", ". $_POST["State"] ." ". $_POST["zip"] . '</p>';
+    echo '<p>'.$_POST["address"].'<br>'. $_POST["city"] .", ". $_POST["State"] ." ". $_POST["zip"] . '</p>';
   }
 ?>
 
