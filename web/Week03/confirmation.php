@@ -27,7 +27,7 @@
         Please confirm that your address is <br>
         <?php displayAddress(); ?>
         <br>
-        <form><input type='submit' formaction="checkout.php">Change</button></form>
+        <form><input type='submit' formaction="checkout.php" value='Change'></form>
     </div>
     <br>
     <table>
