@@ -23,12 +23,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <div class='background' style="text-align:center">
-        Please confirm that your address is <br>
+  <h1>Thank You for your Order</h1>
+    <div class='background' style="text-align:center">  
         <?php displayAddress(); ?>
         <br>
-        <form><input type='submit' formaction="checkout.php" value='Change'></form>
-    
     <br>
       <table>
         <tr><th>Title</th><th>Quantity</th><th>Price</th></tr>
