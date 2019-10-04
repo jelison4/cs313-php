@@ -23,12 +23,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <p style="text-align:center">
+    <div class='background' style="text-align:center">
         Please confirm that your address is <br>
         <?php displayAddress(); ?>
         <br>
         <form><input type='submit' formaction="checkout.php">Change</button></form>
-    </p>
+    </div>
     <br>
     <table>
       <tr><td colspan='3'>and that you ordered:</td></td>
