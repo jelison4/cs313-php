@@ -25,6 +25,7 @@
 <body>
   <h1>Thank You for your Order</h1>
     <div class='background' style="text-align:center">  
+        Your order will be shipped to:
         <?php displayAddress(); ?>
         <br>
     <br>
@@ -34,7 +35,9 @@
           foreach($_SESSION['games'] as $game){
             $game->display();
           }
-          echo "<tr><td class='money' colspan=3><b>Total</b> $" . money_format('%i', $_SESSION['total']) . "</td></tr>";   
+          echo "<tr><td class='money' colspan=3><b>Total</b> $" . money_format('%i', $_SESSION['total']) . "</td></tr>";
+          echo "<tr><td><form><button type='submit' formaction='items.php'>Return to Store</button></form></td></tr>";
+          session_destroy();  
         ?>
       </table>
     </div>
