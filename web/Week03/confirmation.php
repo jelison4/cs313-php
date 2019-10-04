@@ -6,7 +6,7 @@
   $_SESSION['zip']=$_POST["zip"];
 
   function displayAddress(){
-    echo '<p>'.$_GET["address"].'<br>'. $_SESSION['city'] .", ". $_SESSION['state'] ." ". $_SESSION['zip'] . '</p>';
+    echo '<p>'.$_POST["address"].'<br>'. $_SESSION['city'] .", ". $_SESSION['state'] ." ". $_SESSION['zip'] . '</p>';
   }
 ?>
 
