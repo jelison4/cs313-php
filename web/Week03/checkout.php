@@ -10,7 +10,7 @@
   <h1>Checkout</h1>
 
   <form action="confirmation.php" method="POST">
-      <table class=checkout>
+      <table>
         <tr><td>Address:</td><td><input type="text" name="address"></td></tr>
         <tr><td>City:</td><td><input type="text" name="city"></td></tr>
         <tr><td>State:</td><td><input type="text" name="State" maxlength="2" style="text-transform: uppercase;"></td></tr>

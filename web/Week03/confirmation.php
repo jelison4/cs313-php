@@ -23,7 +23,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <div class='background' style="text-align:center">
+    <div style="text-align:center">
         Please confirm that your address is <br>
         <?php displayAddress(); ?>
         <br>
