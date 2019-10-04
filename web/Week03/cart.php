@@ -50,7 +50,7 @@
    }
 */
   session_start();
-  require "/game.php";
+  require "game.php";
 
   $game = new Game();
 
