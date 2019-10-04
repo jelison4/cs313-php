@@ -28,18 +28,19 @@
         <?php displayAddress(); ?>
         <br>
         <form><input type='submit' formaction="checkout.php" value='Change'></form>
-    </div>
+    
     <br>
-    <table>
-      <tr><td colspan='3'>and that you ordered:</td></td>
-      <tr><th>Title</th><th>Quantity</th><th>Price</th></tr>
-      <?php
-        foreach($_SESSION['games'] as $game){
-          $game->display();
-        }
-        echo "<tr><td class='money' colspan=3><b>Total</b> $" . money_format('%i', $_SESSION['total']) . "</td></tr>";   
-      ?>
-    </table>
+      <table>
+        <tr><td colspan='3'>and that you ordered:</td></td>
+        <tr><th>Title</th><th>Quantity</th><th>Price</th></tr>
+        <?php
+          foreach($_SESSION['games'] as $game){
+            $game->display();
+          }
+          echo "<tr><td class='money' colspan=3><b>Total</b> $" . money_format('%i', $_SESSION['total']) . "</td></tr>";   
+        ?>
+      </table>
+    </div>
     
 </body>
 </html>
