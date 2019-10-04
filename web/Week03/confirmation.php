@@ -1,7 +1,9 @@
 <?php
   session_start();
 
-  $_SESSION['games'];
+  if (!isset($_SESSION['games'])) {
+    $_SESSION['games'] = [];
+   }
 
   function displayAddress(){
     echo '<p>'.$_POST["address"].'<br>'. $_POST["city"] .", ". $_POST["State"] ." ". $_POST["zip"] . '</p>';
