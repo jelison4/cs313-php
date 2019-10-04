@@ -1,13 +1,17 @@
 <?php
   session_start();
-  $_SESSION["address"]=$_GET["address"];
-  $_SESSION["city"]=$_POST["city"];
-  $_SESSION["State"]=$_POST["State"];
-  $_SESSION["zip"]=$_POST["zip"];
+  $address=$_GET["address"];
+  $city=$_POST["city"];
+  $State=$_POST["State"];
+  $zip=$_POST["zip"];
 
   function displayAddress(){
-      echo '</p>'. $_SESSION["address"] . "<br>".
-           $_SESSION["city"] .", ". $_SESSION["State"] ." ". $_SESSION["zip"] . '</p>';
+    $address=$_GET["address"];
+    $city=$_POST["city"];
+    $State=$_POST["State"];
+    $zip=$_POST["zip"];
+    echo '</p>'. $address . "<br>".
+          $city .", ". $State ." ". $zip . '</p>';
   }
 ?>
 
