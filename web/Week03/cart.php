@@ -1,4 +1,5 @@
 <?php
+  /*
   class Game{
      public $title;
      public $price;
@@ -47,8 +48,9 @@
             "<td class='money'>$" . money_format('%i', $this->getPrice()*$this->getQuantity()) . "</td><td><button onclick='removeFromCart(".'"'.$this->getTitle().'"'.")'>Remove</button></td></tr>";
      }
    }
-
+*/
   session_start();
+  include("game.php");
 
   $game = new Game();
 
