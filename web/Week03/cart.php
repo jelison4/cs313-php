@@ -49,9 +49,9 @@
      }
    }
 */
+  include ("game.php");
   session_start();
-  require "game.php";
-
+  
   $game = new Game();
 
   if($game->getPrice() != 0){
