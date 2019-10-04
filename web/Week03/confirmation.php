@@ -26,7 +26,8 @@
     <p>
         Please confirm that your address is <br>
         <?php displayAddress(); ?>
-    and that you ordered:
+    </p>
+    <br>and that you ordered:
     <table>
       <tr><th>Title</th><th>Quantity</th><th>Price</th></tr>
       <?php
@@ -35,6 +36,6 @@
         }   
       ?>
     </table>
-    </p>
+    
 </body>
 </html>
