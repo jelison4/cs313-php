@@ -64,7 +64,7 @@
 
 <h1>The Game Place</h1>
 <br>
-<table>
+<table class='background'>
     <tr><th>Game</th>                                 <th>Platform</th>             <th>Price</th><th>Quantitiy</th></tr>
     <?php displayTable(); ?>
     <tr><td colspan="4"><td><a href="cart.php"><img src="icons8-shopping-cart-96.png" alt="Shopping Cart"></a> </td></tr>

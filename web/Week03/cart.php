@@ -51,7 +51,7 @@
 </head>
 <body>
   <h1>Shopping Cart</h1>
-<table>
+<table class='background'>
     <?php
     // Check to see if anything is in the cart
     if(!empty($_SESSION['games'])){
