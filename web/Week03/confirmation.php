@@ -1,17 +1,13 @@
 <?php
   session_start();
-  $address=$_GET["address"];
-  $city=$_POST["city"];
-  $State=$_POST["State"];
-  $zip=$_POST["zip"];
+  $_SESSION['address']=$_GET["address"];
+  $_SESSION['city']=$_POST["city"];
+  $_SESSION['state']=$_POST["State"];
+  $_SESSION['zip']=$_POST["zip"];
 
   function displayAddress(){
-    $address=$_GET["address"];
-    $city=$_POST["city"];
-    $State=$_POST["State"];
-    $zip=$_POST["zip"];
-    echo '<p>'. $address . "<br>".
-          $city .", ". $State ." ". $zip . '</p>';
+    echo '<p>$_SESSION["address"]<br>'.
+         $_SESSION['city'] .", ". $_SESSION['state'] ." ". $_SESSION['zip'] . '</p>';
   }
 ?>
 
@@ -24,9 +20,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <p>
-        does this work?
-      <?php displayAddress(); ?>
-    </p>
+    <?php displayAddress(); ?>
 </body>
 </html>
