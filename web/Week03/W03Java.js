@@ -16,5 +16,5 @@ function addToCart(game){
 }
 
 function deleteFromCart(title){
-  alert(title+("will be deleted"));
+  console.log(tile);
 }
