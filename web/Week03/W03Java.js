@@ -14,3 +14,7 @@ function addToCart(game){
   xhr.open("POST", QString, true);
   xhr.send();
 }
+
+function deleteFromCart(title){
+  alert(title+("will be deleted"));
+}
