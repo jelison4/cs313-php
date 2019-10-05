@@ -50,6 +50,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
+<script src="W03Java.js"></script>
   <h1>Shopping Cart</h1>
 <table class='background'>
     <?php
