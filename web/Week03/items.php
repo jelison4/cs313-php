@@ -45,7 +45,7 @@
     foreach($titles as $game){
       echo '<tr><td>'. $game .'</td>
                 <td>'. $platformMap[$game] .'</td>
-                <td class="money">$'.$priceMap[$game].'</td>
+                <td class="money">$'. money_format('%i',$priceMap[$game]).'</td>
                 <td style="text-align:center"><input type="number" value="1" min="1" max="10" size="1" id="'.$game.'Quant"></td>
                 <td><button onclick="addToCart('."'". $game . "'" .')">Add to Cart</button></td></tr>';
     }

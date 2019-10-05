@@ -3,6 +3,7 @@ class Game{
      public $title;
      public $price;
      public $quantity;
+     public $platform;
 
      function Game(){
       $this->title = $_GET["title"];
@@ -23,6 +24,22 @@ class Game{
       );
 
       $this->price = $priceMap[$this->title];
+
+      $platformMap = array(
+        "Banjo-Kazooie"=>"N64",
+        "Chrono Trigger"=>"SNES",
+        "Earthbound"=>"SNES",
+        "Final Fantasy VII"=>"PS1",
+        "The Legend of Zelda: Link to the Past"=>"SNES",
+        "The Legend of Zelda: Ocarina of Time"=>"N64",
+        "Pokemon Blue"=>"Gameboy",
+        "Pokemon Snap"=>"N64",
+        "Suikoden"=>"PS1",
+        "Super Mario Brothers"=>"SNES",
+        "Super Smash Brothers"=>"N64"
+      );
+
+      $this->platform = $platformMap[$this->title];
      }
 
       function getTitle(){
