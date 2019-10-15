@@ -25,7 +25,7 @@ catch (PDOException $ex)
 $statement = $db->query('SELECT book, chapter, verse, content FROM scripture');
 while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 {
-  echo 'book: ' . $row['book'] . ' chapter: ' . $row['chapter'] . 'verse' . $row['verse'] . 'content' . $row['content'] .'<br/>';
+  echo '<b>' . $row['book'] . ' ' . $row['chapter'] . ':' . $row['verse'] . '</b> - ' . $row['content'] .'<br/>';
 }
 
 ?>
