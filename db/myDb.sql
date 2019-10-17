@@ -55,12 +55,14 @@ INSERT INTO category (category_title) VALUES ('100%');
 INSERT INTO category (category_title) VALUES ('Any %');
 INSERT INTO category (category_title) VALUES ('All Bosses');
 INSERT INTO category (category_title) VALUES ('Glitchless');
+INSERT INTO category (category_title) VALUES ('Out of Bounds');
 
 /* Inserting runs*/
 INSERT INTO run (user_id, game_id, platform_id, time, valid, category_id) VALUES (1, 1, 1, '00:21:42', True, 2);
 INSERT INTO run (user_id, game_id, platform_id, time, valid, category_id) VALUES (2, 1, 2, '00:19:55', True, 2);
 INSERT INTO run (user_id, game_id, platform_id, time, valid, category_id) VALUES (4, 4, 6, '01:41:30', True, 1);
 INSERT INTO run (user_id, game_id, platform_id, time, valid, category_id) VALUES (10, 16, 1, '00:16:14', True, 4);
+INSERT INTO run (user_id, game_id, platform_id, time, valid, category_id) VALUES (10, 16, 1, '00:07:46', True, 5);
 
 /* Displaying table with | username | Game | Category | Time | Platform | Validated | */
 SELECT users.username, game.title, category.category_title, run.time, platform.name, run.valid FROM users, run, platform, game, category WHERE run.user_id = users.id AND platform_id = platform.id AND run.game_id = game.id AND run.category_id = category.id ORDER BY run.time;
