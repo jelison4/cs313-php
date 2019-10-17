@@ -12,7 +12,7 @@
         $statement = $db->query($query);
         while ($row = $statement->fetch(PDO::FETCH_ASSOC))
         {
-            echo '<tr colspan=6>' . $row['users.username'] . '</tr>';
+            echo '<tr colspan=6>' . $row['users.id'] . '</tr>';
             echo 'does this work?';
         }
     }
