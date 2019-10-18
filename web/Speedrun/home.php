@@ -33,6 +33,17 @@
         return $status;
     }
 
+    function generateGameDropdown(){
+        $db = get_db();
+        $gameQuery='SELECT DISTINCT run.game_id, game.title FROM run, game WHERE run.game_id = game.id';
+        $statement = $db->query($gameQuery);
+
+        while ($row = $statement->fetch(PDO::FETCH_ASSOC))
+        {
+            echo "<option value=" . $row['game_id']  . ">" . $row['title'] . "</option>";
+        }
+    }
+
 ?>
 
 <!DOCTYPE html>
@@ -46,6 +57,11 @@
 </head>
 <body>
     <h1>SPEEDRUN!!!!(Working Title)</h1>
+
+    <select id=gameSelect>
+      <option value=''>Select a Game</option>
+      <?php generateGameDropdown(); ?>
+    </select>
     <table>
         <tr><th>User</th><th>Game</th><th>Category</th><th>Time</th><th>Platform</th><th>Validation</th></tr>
         <?php displayTable(); ?>
