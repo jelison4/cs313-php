@@ -7,3 +7,8 @@ body{
     width: 900px;
     margin: 0 auto;
 }
+
+table{
+    background-color: white;
+    margin: 0 auto;
+}
