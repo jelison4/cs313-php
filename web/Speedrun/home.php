@@ -14,7 +14,7 @@
         while ($row = $statement->fetch(PDO::FETCH_ASSOC))
         {
             var_dump($row);
-            echo '<tr><td colspan=6>' . 'does this work?' . $row['users.username'] . '</td></tr>';
+            echo '<tr><td colspan=6>' . 'does this work?' . $row['username'] . '</td></tr>';
         }
     }
 
