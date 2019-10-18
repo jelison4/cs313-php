@@ -63,7 +63,6 @@
             <td colspan="3"><select id=gameSelect><option value=''>Select a Game</option><?php generateGameDropdown(); ?></select></td>
             <td colspan="3"><select id=runCategory><option value=''>Select a Category</option></select></td>
         </tr>
-        <br>
         <tr><th>User</th><th>Game</th><th>Category</th><th>Time</th><th>Platform</th><th>Validation</th></tr>
         <?php displayTable(); ?>
     </table>
