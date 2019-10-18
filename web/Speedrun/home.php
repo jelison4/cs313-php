@@ -35,7 +35,7 @@
 
     function generateGameDropdown(){
         $db = get_db();
-        $gameQuery='SELECT DISTINCT run.game_id, game.title FROM run, game WHERE run.game_id = game.id';
+        $gameQuery='SELECT DISTINCT run.game_id, game.title FROM run, game WHERE run.game_id = game.id ORDER BY game.title';
         $statement = $db->query($gameQuery);
 
         while ($row = $statement->fetch(PDO::FETCH_ASSOC))
@@ -62,7 +62,7 @@
       <option value=''>Select a Game</option>
       <?php generateGameDropdown(); ?>
     </select>
-    <table>
+    <table id=runTable>
         <tr><th>User</th><th>Game</th><th>Category</th><th>Time</th><th>Platform</th><th>Validation</th></tr>
         <?php displayTable(); ?>
     </table>
