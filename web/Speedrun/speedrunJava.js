@@ -12,14 +12,11 @@ function generateDropdown(content){
 */
 
 function hideCat(){
-    If(!document.getElementById('runCategory').hasAttribute('visibility: hidden')){
+    If(!document.getElementById('runCategory').hasAttribute('visibility: hidden'))
         document.getElementById('runCategory').setAttribute('visibility: hidden');
-    }
-
 }
 
 function showCat(){
-    If(document.getElementById('runCategory').hasAttribute('visibility: hidden')){
+    If(document.getElementById('runCategory').hasAttribute('visibility: hidden'))
         document.getElementById('runCategory').setAttribute('visibility: visable');
-    }
 }
