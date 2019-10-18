@@ -12,11 +12,11 @@ function generateDropdown(content){
 */
 
 function toggleCat(){
-    if(document.getElementById('gameSelect').value='0'){
+    if(document.getElementById('gameSelect').value='0' && !document.getElementById('runCategory').classList.contains('hidden')){
         document.getElementById('runCategory').classList.add('hidden'); 
         console.log("Zero");
     }
-    else{
+    if(document.getElementById('runCategory').classList.contains('hidden')){
         document.getElementById('runCategory').classList.remove('hidden');
         console.log("it should be showing"); 
     }
