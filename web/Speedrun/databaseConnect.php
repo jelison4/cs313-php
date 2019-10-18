@@ -23,12 +23,4 @@ function get_db(){
     return $db;
 }
 
-/*
-$statement = $db->query('SELECT book, chapter, verse, content FROM scripture');
-echo '<h1>Scripture Resources</h1>';
-while ($row = $statement->fetch(PDO::FETCH_ASSOC))
-{
-  echo '<b>' . $row['book'] . ' ' . $row['chapter'] . ':' . $row['verse'] . '</b> - "' . $row['content'] .'"<br/>';
-}
-*/
 ?>
