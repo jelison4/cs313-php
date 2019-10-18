@@ -12,12 +12,13 @@ function generateDropdown(content){
 */
 
 function toggleCat(){
+    console.log('Does this work?');
     if(document.getElementById('gameSelect').value=0){
         document.getElementById('runCategory').classList.add('hidden'); 
         console.log("Zero");
     }
     else{
         document.getElementById('runCategory').classList.remove('hidden');
-        console.log("it should be showing") 
+        console.log("it should be showing"); 
     }
 }
