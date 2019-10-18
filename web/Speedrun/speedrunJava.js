@@ -11,7 +11,7 @@ function generateDropdown(content){
 }
 */
 
-function hideCat(){
+function toggleCat(){
     if(document.getElementById("gameSelect").value=''){
         document.getElementById('runCategory').classList.add('hidden'); 
     }
