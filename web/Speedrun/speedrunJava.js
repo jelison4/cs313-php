@@ -12,11 +12,13 @@ function generateDropdown(content){
 */
 
 function hideCat(){
-    If(!document.getElementById('runCategory').hasAttribute('visibility: hidden'))
-        document.getElementById('runCategory').setAttribute('visibility: hidden');
+    if(!document.getElementById('runCategory').classList.contains(hidden)){
+        document.getElementById('runCategory').classList.add('hidden'); 
+    }
 }
 
 function showCat(){
-    If(document.getElementById('runCategory').hasAttribute('visibility: hidden'))
-        document.getElementById('runCategory').setAttribute('visibility: hidden', 'visibility: visable');
+    if(document.getElementById('runCategory').classList.contains(hidden)){
+        document.getElementById('runCategory').classList.remove('hidden'); 
+    }
 }

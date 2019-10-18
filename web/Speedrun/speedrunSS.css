@@ -26,6 +26,6 @@ td{
     color: red;
 }
 
-#runCategory{
+.hidden{
     visibility: hidden;
 }
