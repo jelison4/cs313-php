@@ -14,5 +14,5 @@
     $categorys += $row['category_title'].' ';
   }
 
-  echo $categorys;
+  return $categorys;
 ?>
