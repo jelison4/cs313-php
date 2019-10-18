@@ -14,8 +14,8 @@
 
     function formatTime($time){
         $fTime = ltrim($time, "0");
-        $fTime = ltrim($time, ":");
-        $fTime = ltrim($time, "0");
+        $fTime = ltrim($fTime, ":");
+        $fTime = ltrim($fTime, "0");
         
         return $fTime;
     }
