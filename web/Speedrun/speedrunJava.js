@@ -1,23 +1,15 @@
-/*
 function generateDropdown(content){
+
+    var gameID=document.getElementById('gameSelect').value;
+    var queryString='getCategorys.php?gameID='+gameID;
+
     var xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function(){
         if (xhr.readyState==4 && xhr.status==200){
-            
+            categorys = JSON.parse(xhr.responseText);
+            console.log(categorys);
         }
       }
-      xhr.open("GET", , false);
+      xhr.open("GET", queryString, false);
       xhr.send();
-}
-*/
-
-function toggleCat(){
-    if(document.getElementById('gameSelect').value='0' && !document.getElementById('runCategory').classList.contains('hidden')){
-        document.getElementById('runCategory').classList.add('hidden'); 
-        console.log("Zero");
-    }
-    if(document.getElementById('runCategory').classList.contains('hidden')){
-        document.getElementById('runCategory').classList.remove('hidden');
-        console.log("it should be showing"); 
-    }
 }

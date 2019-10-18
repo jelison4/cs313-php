@@ -71,3 +71,4 @@ SELECT users.username, game.title, category.category_title, run.time, platform.n
 
 /* Grabing list of game id's and game titles from database with duplicates removed */
 SELECT DISTINCT run.game_id, game.title FROM run, game WHERE run.game_id = game.id ORDER BY game.title;
+SELECT DISTINCT run.category_id, category.category_title FROM run, category WHERE run.category_id = category.id AND run.game_id=16;
