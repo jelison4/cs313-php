@@ -10,6 +10,7 @@
         $db = get_db();
         $query='SELECT users.username, game.title, category.category_title, run.time, platform.name, run.valid FROM users, run, platform, game, category WHERE run.user_id = users.id AND platform_id = platform.id AND run.game_id = game.id AND run.category_id = category.id ORDER BY run.time';
         $statement = $db->query($query);
+        var_dump($statement);
         while ($row = $statement->fetch(PDO::FETCH_ASSOC))
         {
             echo '<tr><td colspan=6>' . 'does this work?' . $row['users.username'] . '</td></tr>';
