@@ -18,5 +18,5 @@ function hideCat(){
 
 function showCat(){
     If(document.getElementById('runCategory').hasAttribute('visibility: hidden'))
-        document.getElementById('runCategory').setAttribute('visibility: visable');
+        document.getElementById('runCategory').setAttribute('visibility: hidden', 'visibility: visable');
 }
