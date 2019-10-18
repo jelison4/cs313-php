@@ -12,7 +12,7 @@ function generateDropdown(content){
 */
 
 function toggleCat(){
-    if(document.getElementById("gameSelect").value='0'){
+    if(document.getElementById('gameSelect').value=0){
         document.getElementById('runCategory').classList.add('hidden'); 
     }
     else{
