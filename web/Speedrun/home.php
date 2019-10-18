@@ -40,7 +40,7 @@
 
         while ($row = $statement->fetch(PDO::FETCH_ASSOC))
         {
-            echo "<option value=" . $row['game_id']  . "onselect='showCat()'>" . $row['title'] . "</option>";
+            echo "<option value=" . $row['game_id']  . " onselect='showCat()'>" . $row['title'] . "</option>";
         }
     }
 

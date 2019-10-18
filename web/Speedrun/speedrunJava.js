@@ -12,13 +12,13 @@ function generateDropdown(content){
 */
 
 function hideCat(){
-    if(!document.getElementById('runCategory').classList.contains(hidden)){
+    if(!document.getElementById('runCategory').classList.contains('hidden')){
         document.getElementById('runCategory').classList.add('hidden'); 
     }
 }
 
 function showCat(){
-    if(document.getElementById('runCategory').classList.contains(hidden)){
+    if(document.getElementById('runCategory').classList.contains('hidden')){
         document.getElementById('runCategory').classList.remove('hidden'); 
     }
 }
