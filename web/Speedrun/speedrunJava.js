@@ -12,13 +12,10 @@ function generateDropdown(content){
 */
 
 function hideCat(){
-    if(!document.getElementById('runCategory').classList.contains('hidden')){
+    if(document.getElementById("gameSelect").value=''){
         document.getElementById('runCategory').classList.add('hidden'); 
     }
-}
-
-function showCat(){
-    if(document.getElementById('runCategory').classList.contains('hidden')){
+    else{
         document.getElementById('runCategory').classList.remove('hidden'); 
     }
 }

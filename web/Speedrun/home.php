@@ -40,7 +40,7 @@
 
         while ($row = $statement->fetch(PDO::FETCH_ASSOC))
         {
-            echo "<option value=" . $row['game_id']  . " onselect='showCat()'>" . $row['title'] . "</option>";
+            echo "<option value=" . $row['game_id']  . ">" . $row['title'] . "</option>";
         }
     }
 
@@ -60,7 +60,7 @@
 
     <table id=runTable>
         <tr>
-            <td colspan="3"><select id=gameSelect><option value='' onselect="hideCat()">Select a Game</option><?php generateGameDropdown(); ?></select></td>
+            <td colspan="3"><select id=gameSelect><option value='' onChange="toggleCat()">Select a Game</option><?php generateGameDropdown(); ?></select></td>
             <td colspan="3"><select id=runCategory class=hidden><option value=''>Select a Category</option></select></td>
         </tr>
         <tr><th>User</th><th>Game</th><th>Category</th><th>Time</th><th>Platform</th><th>Validation</th></tr>
