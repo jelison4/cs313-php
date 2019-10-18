@@ -13,7 +13,9 @@
     }
 
     function formatTime($time){
-        $fTime= ltrim($time, "0");
+        $fTime = ltrim($time, "0");
+        $fTime = ltrim($time, ":");
+        $fTime = ltrim($time, "0");
         
         return $fTime;
     }
