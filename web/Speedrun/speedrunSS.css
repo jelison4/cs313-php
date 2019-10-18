@@ -1,7 +1,9 @@
-h1{
-    width: 100%;
-    color: white;
+header{
     background-color: black;
+}
+
+h1{
+    color: white;
     text-align: center;
 }
 
