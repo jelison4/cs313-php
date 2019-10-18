@@ -25,3 +25,7 @@ td{
 .invalid{
     color: red;
 }
+
+.runCategory{
+    visibility: hidden;
+}
