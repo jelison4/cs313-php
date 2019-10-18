@@ -17,3 +17,11 @@ td{
     text-align: center;
     padding: 1px 7px;
 }
+
+.valid{
+    color: green;
+}
+
+.invalid{
+    color: red;
+}

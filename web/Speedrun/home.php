@@ -8,7 +8,7 @@
 
         while ($row = $statement->fetch(PDO::FETCH_ASSOC))
         {
-            echo '<tr><td>'.$row['username'].'</td><td>'.$row['title'].'</td><td>'.$row['category_title'].'</td><td>'.formatTime($row['time']).'</td><td>'.$row['name'].'</td><td>'.$row['valid'].'</td></tr>';
+            echo '<tr><td>'.$row['username'].'</td><td>'.$row['title'].'</td><td>'.$row['category_title'].'</td><td>'.formatTime($row['time']).'</td><td>'.$row['name'].'</td>'.valitity($row['valid']).'</td></tr>';
         }
     }
 
@@ -18,6 +18,19 @@
         $fTime = ltrim($fTime, "0");
         
         return $fTime;
+    }
+
+    function valitity($valid){
+        $status=null;
+        If($valid==1){
+            $status='<td class=valid>Validated';
+        }
+
+        else{
+            $status='<td class=invalid> Not Validated';
+        }
+
+        return $status;
     }
 
 ?>
