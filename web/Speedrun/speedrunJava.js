@@ -12,7 +12,6 @@ function generateDropdown(content){
 */
 
 function toggleCat(){
-    console.log('Does this work?');
     if(document.getElementById('gameSelect').value='0'){
         document.getElementById('runCategory').classList.add('hidden'); 
         console.log("Zero");
