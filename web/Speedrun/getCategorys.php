@@ -6,15 +6,13 @@
 
   $gameQuery='SELECT DISTINCT run.category_id, category.category_title FROM run, category WHERE run.category_id = category.id AND run.game_id='.$game.';';
   
-  var_dump($gameQuery);
+  $statement = $db->query($gameQuery);
 
-  //$statement = $db->query($gameQuery);
-/*
-  $categorys = array();
+  $categorys = null;
   while ($row = $statement->fetch(PDO::FETCH_ASSOC))
   {
-    $categorys += $row['category_title'];
+    $categorys += $row['category_title'].' ';
   }
 
-  echo json_encode($categorys);*/
+  echo json_encode($categorys);
 ?>
