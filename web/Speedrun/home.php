@@ -8,8 +8,14 @@
 
         while ($row = $statement->fetch(PDO::FETCH_ASSOC))
         {
-            echo '<tr><td>'.$row['username'].'</td><td>'.$row['title'].'</td><td>'.$row['category_title'].'</td><td>'.$row['time'].'</td><td>'.$row['name'].'</td><td>'.$row['valid'].'</td></tr>';
+            echo '<tr><td>'.$row['username'].'</td><td>'.$row['title'].'</td><td>'.$row['category_title'].'</td><td>'.formatTime($row['time']).'</td><td>'.$row['name'].'</td><td>'.$row['valid'].'</td></tr>';
         }
+    }
+
+    function formatTime($time){
+        $fTime= ltrim($time, "0");
+        
+        return $fTime;
     }
 
 ?>
