@@ -12,3 +12,7 @@ table{
     background-color: white;
     margin: 0 auto;
 }
+
+td{
+    margin: 4px;
+}
