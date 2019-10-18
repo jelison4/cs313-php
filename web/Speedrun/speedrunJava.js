@@ -10,3 +10,9 @@ function generateDropdown(content){
       xhr.send();
 }
 */
+
+function hideCat()
+{
+    If(!document.getElementById('runCategory').hasAttribute('visibility: hidden'))
+        document.getElementById('runCategory').setAttribute('visibility: hidden');
+}
