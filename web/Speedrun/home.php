@@ -62,7 +62,13 @@
       <option value=''>Select a Game</option>
       <?php generateGameDropdown(); ?>
     </select>
+
+    <select id=runCategory>
+      <option value=''>Select a Category</option>
+    </select>
+
     <table id=runTable>
+        <tr><td colspan="6"><select id=gameSelect><option value=''>Select a Game</option><?php generateGameDropdown(); ?></select></td></tr>
         <tr><th>User</th><th>Game</th><th>Category</th><th>Time</th><th>Platform</th><th>Validation</th></tr>
         <?php displayTable(); ?>
     </table>

@@ -70,4 +70,4 @@ INSERT INTO run (user_id, game_id, platform_id, time, valid, category_id) VALUES
 SELECT users.username, game.title, category.category_title, run.time, platform.name, run.valid FROM users, run, platform, game, category WHERE run.user_id = users.id AND platform_id = platform.id AND run.game_id = game.id AND run.category_id = category.id ORDER BY run.time;
 
 /* Grabing list of game id's and game titles from database with duplicates removed */
-SELECT DISTINCT game.title FROM run, game WHERE run.game_id = game.id ORDER BY game.title;
+SELECT DISTINCT run.game_id, game.title FROM run, game WHERE run.game_id = game.id ORDER BY game.title;
