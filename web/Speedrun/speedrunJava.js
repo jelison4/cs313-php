@@ -1,4 +1,4 @@
-function generateDropdown(content){
+function generateCatDropdown(){
 
     var gameID=document.getElementById('gameSelect').value;
     var queryString='getCategorys.php?gameID='+gameID;
