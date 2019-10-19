@@ -12,16 +12,14 @@
       <h1>Submission</h1>
     </header>
 
-    <form>
-        <table>
-          <tr><td>Username:</td><td><input type='text' id='username'></td></tr>
-          <tr><td>Game:</td><td><select id='gameSelect' onChange='generateCatDropdown()'><?php require 'home.php'; generateGameDropdown();?></select></td></tr>
-          <tr><td id='runCategory'>Run Catagory:</td></tr>
-        </table>
-    </form>
-
     <div class='background'>
-
+        <form>
+            <table>
+                <tr><td>Username:</td><td><input type='text' id='username'></td></tr>
+                <tr><td>Game:</td><td><select id='gameSelect' onChange='generateCatDropdown()'><?php require 'home.php'; generateGameDropdown();?></select></td></tr>
+                <tr><td id='runCategory'>Run Catagory:</td></tr>
+            </table>
+        </form>
     </div>
 </body>
 </html>
