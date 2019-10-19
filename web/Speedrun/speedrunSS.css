@@ -20,8 +20,8 @@ body{
 .background:before{
     content: '';
     position: absolute;
-    top: -2;
-    left: -2;
+    top: -2px;
+    left: -2px;
     background: linear-gradient(45deg, #702094, #0000ff, #00ff00, #ffff00, #ff0000, #fb0094, #0000ff, #00ff00, #ffff00, #ff0000);
     background-size: 400%;
     width:calc(100% + 4px);
