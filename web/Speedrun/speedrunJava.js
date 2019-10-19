@@ -12,6 +12,7 @@ function generateCatDropdown(){
         xhr.onreadystatechange = function(){
             if (xhr.readyState==4 && xhr.status==200){
                 categorys = JSON.parse(xhr.responseText);
+                console.log(categorys);
 
                 var categoryDropdown = '<option value="0">Select a Category</option>';
                 categorys.forEach(element => {
