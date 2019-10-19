@@ -16,6 +16,10 @@ body{
     margin: 0 auto;
 }
 
+table{
+    margin: 0 auto;
+}
+
 td{
     text-align: center;
     padding: 1px 7px;
