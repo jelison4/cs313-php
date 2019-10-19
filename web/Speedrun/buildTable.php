@@ -24,7 +24,7 @@
         while ($row = $statement->fetch(PDO::FETCH_ASSOC))
         {
             if($title==0){
-                echo '<tr><th colspan=5><h3>'.$row['title'].'</h3></th></tr><tr><th>User</th><th>Time</th><th>Category</th><th>Platform</th><th>Validity</th></tr>';
+                echo '<tr><th colspan=5><h2>'.$row['title'].'</h2></th></tr><tr><th>User</th><th>Time</th><th>Category</th><th>Platform</th><th>Validity</th></tr>';
                 $title=1;
             }
             echo '<tr><td>'.$row['username'].'</td><td>'.formatTime($row['time']).'</td><td>'. $row['category_title'] .'</td><td>'.$row['name'].'</td>'.valitity($row['valid']).'</td></tr>';
