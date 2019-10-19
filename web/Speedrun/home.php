@@ -13,8 +13,6 @@
 
         $game=1;
         $gameQuery='SELECT DISTINCT run.category_id, category.category_title FROM run, category WHERE run.category_id = category.id AND run.game_id='.$game.';';
-
-        var_dump($gameQuery);
     }
 
     function formatTime($time){

@@ -31,11 +31,6 @@
       $categorys.array_push($cat);
     }
   }
-/*
-  $any=new category(2,'Any %');
-  $foo=new category(1,'100%');
-  $bar=new category(4,'glitchless');
-  $categorys = array( $any, $foo, $bar);
-*/
+
   echo json_encode($categorys);
 ?>
