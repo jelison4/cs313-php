@@ -32,10 +32,10 @@
     <table>
         <tr>
             <td colspan="3"><select id='gameSelect' onChange='generateCatDropdown()'><option value='0'>Select a Game</option><?php generateGameDropdown(); ?></select></td>
-            <td colspan="3"><select id='runCategory'><option value=''>Select a Category</option></select></td>
+            <td colspan="3"><select id='runCategory' onChange='generateTable()'><option value=''>Select a Category</option></select></td>
         </tr>
     </table>
-    <table id='runTable'><tr><td>Does this look ok?</td></tr></table>
+    <table id='runTable'></table>
     </div>
 </body>
 </html>
