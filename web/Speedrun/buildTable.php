@@ -16,7 +16,7 @@
        }
     }
     else{
-        $query='SELECT DISTINCT users.username, run.time, category.category_title, platform.name, run.valid, game.title, FROM users, run, platform, category WHERE run.user_id = users.id AND platform_id = platform.id AND run.game_id = '.$game.' AND run.category_id = category.id ORDER BY run.time;';
+        $query='SELECT DISTINCT users.username, run.time, category.category_title, platform.name, run.valid, game.title FROM users, run, platform, category, game WHERE run.user_id = users.id AND platform_id = platform.id AND run.category_id = category.id AND run.game_id = '.$game.' AND game.id = '.$game.' ORDER BY run.time;';
         $statement = $db->query($query);
         echo $statement;
         //echo '<tr><th>User</th><th>Time</th><th>Category</th><th>Platform</th><th>Validity</th></tr>';
