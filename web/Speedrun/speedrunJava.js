@@ -27,7 +27,7 @@ function generateCatDropdown() {
         xhr.send();
     }
     if (gameID == 0) {
-        document.getElementById('runCategory').innerHTML = '<option value="0">Select a Category</option>';
+        document.getElementById('runCategory').innerHTML = '<option value="0">-</option>';
     }
 }
 
