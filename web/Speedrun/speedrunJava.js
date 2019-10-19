@@ -17,14 +17,9 @@ function generateCatDropdown(){
                 categorys = JSON.parse(xhr.responseText);
                 console.log(categorys);
 //'runCategory'
-                var categoryDropdown = null;
+                var categoryDropdown = <option value=''>Select a Category</option>;
                 categorys.forEach(element => {
-                    if(categoryDropdown==null){
-                        categoryDropdown ="<option value=" + element.id  + ">" + element.name + "</option>";
-                    }
-                    else{
-                        categoryDropdown +="<option value=" + element.id  + ">" + element.name + "</option>";
-                    }
+                    categoryDropdown +="<option value=" + element.id  + ">" + element.name + "</option>";
                 });
                 console.log(categoryDropdown);
 
