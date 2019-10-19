@@ -9,7 +9,7 @@ function generateCatDropdown() {
             if (xhr.readyState == 4 && xhr.status == 200) {
                 categorys = JSON.parse(xhr.responseText);
 
-                var categoryDropdown = '<option value="0">Select a Category</option>';
+                var categoryDropdown = '<option value="category.id">All</option>';
                 categorys.forEach(element => {
                     categoryDropdown += "<option value=" + element.id + ">" + element.name + "</option>";
                 });
@@ -23,6 +23,7 @@ function generateCatDropdown() {
     if (gameID == 0) {
         document.getElementById('runCategory').innerHTML = '<option value="0">Select a Category</option>';
     }
+    generateTable();
 }
 
 function generateTable(){
