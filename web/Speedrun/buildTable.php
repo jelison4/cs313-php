@@ -6,7 +6,7 @@
     $category=$_GET['catID'];
 
     if($category!='category.id'){
-        $query='SELECT DISTINCT users.username, run.time, platform.name, run.valid, game.title, category.category_title FROM users, run, platform, category, game WHERE run.user_id = users.id AND platform_id = platform.id AND run.game_id = '.$game.' AND run.category_id = '.$category.' AND category.category_title = '.$category.' AND game.id='.$game.'ORDER BY run.time;';
+        $query='SELECT DISTINCT users.username, run.time, platform.name, run.valid, game.title, category.category_title FROM users, run, platform, category, game WHERE run.user_id = users.id AND platform_id = platform.id AND run.game_id = '.$game.' AND run.category_id = '.$category.' AND category.id = '.$category.' AND game.id='.$game.'ORDER BY run.time;';
         $statement = $db->query($query);
 
         $title=0;
