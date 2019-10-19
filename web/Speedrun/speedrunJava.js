@@ -17,9 +17,14 @@ function generateCatDropdown(){
                 categorys = JSON.parse(xhr.responseText);
                 console.log(categorys);
 //'runCategory'
-                var categoryDropdown;
+                var categoryDropdown = null;
                 categorys.forEach(element => {
-                    categoryDropdown +="<option value=" + element.id  + ">" + element.name + "</option>";
+                    if(categoryDropdown==null){
+                        categoryDropdown ="<option value=" + element.id  + ">" + element.name + "</option>";
+                    }
+                    else{
+                        categoryDropdown +="<option value=" + element.id  + ">" + element.name + "</option>";
+                    }
                 });
                 console.log(categoryDropdown);
             }
