@@ -21,7 +21,7 @@
     $count+=1;
   }
 */
-$categorys=array('Any %', '100%', 'glitchless');
+ $categorys = array( 2=>'Any %', 1=>'100%', 4=>'glitchless');
 
   echo json_encode($categorys);
 ?>
