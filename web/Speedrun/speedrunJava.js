@@ -28,7 +28,7 @@ function generateCatDropdown() {
 function generateTable(){
     var gameID = document.getElementById('gameSelect').value;
     var catID = document.getElementById('runCategory').value;
-    
+
     if (catID != 0) {
         var queryString = 'buildTable.php?gameID=' + gameID + '&catID=' + catID;
    
