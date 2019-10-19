@@ -24,11 +24,13 @@
   {
     $cat=new category($row['category_id'], $row['category_title']);
 
-    if(empty($categorys)){
-      $categorys = array($cat);
+    if(!empty($categorys)){
+      //$categorys = array($cat);
+      $categorys.array_push($cat);
     }
     else{
-      $categorys.array_push($cat);
+      $categorys = array($cat);
+      //$categorys.array_push($cat);
     }
   }
 
