@@ -12,7 +12,7 @@
 
   require "databaseConnect.php";
 
-  $game=1;//$_GET['gameID'];
+  $game=$_GET['gameID'];
   $db = get_db();
 
   $gameQuery='SELECT DISTINCT run.category_id, category.category_title FROM run, category WHERE run.category_id = category.id AND run.game_id='.$game.';';
