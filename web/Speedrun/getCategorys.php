@@ -1,7 +1,18 @@
 <?php
+  class category{
+    public $id;
+    public $name;
+
+    function __construct1($id, $name)
+    {
+      $this->id = $id;
+      $this->name = $name;
+    }
+  }
+
   require "databaseConnect.php";
 
-  $game=$_GET['gameID'];
+  $game=1;//$_GET['gameID'];
   $db = get_db();
 
   $gameQuery='SELECT DISTINCT run.category_id, category.category_title FROM run, category WHERE run.category_id = category.id AND run.game_id='.$game.';';
@@ -14,7 +25,10 @@
     $categorys.array_push($row['category_id']=>$row['category_title']);
   }
 */
- $categorys = array( 2=>'Any %', 1=>'100%', 4=>'glitchless');
+  $any=new category(2,'Any %');
+  $foo=new category(1,'100%');
+  $bar=new category(4,'glitchless');
+  $categorys = array( $any, $foo, $bar);
 
   echo json_encode($categorys);
 ?>
