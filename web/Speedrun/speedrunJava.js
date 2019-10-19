@@ -36,11 +36,10 @@ function generateTable(){
 
         xhr.onreadystatechange = function () {
             if (xhr.readyState == 4 && xhr.status == 200) {
-                
+                document.getElementById('runTable').innerHTML = xhr.responseText
             }
         }
-        xhr.open("GET", queryString, false);
+        xhr.open("GET", queryString, true);
         xhr.send();
     }
-    //'SELECT DISTINCT users.username, run.time, platform.name, run.valid FROM users, run, platform, category WHERE run.user_id = users.id AND platform_id = platform.id AND run.game_id = 1 AND run.category_id = 2 ORDER BY run.time;'
 }

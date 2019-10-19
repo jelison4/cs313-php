@@ -3,13 +3,19 @@
 
     function displayTable(){
         $db = get_db();
-        $query='SELECT users.username, game.title, category.category_title, run.time, platform.name, run.valid FROM users, run, platform, game, category WHERE run.user_id = users.id AND platform_id = platform.id AND run.game_id = game.id AND run.category_id = category.id ORDER BY run.time';
+
+        $game=$_GET['gameID'];
+        $category=$_GET['catID'];
+
+        $query='SELECT DISTINCT users.username, run.time, platform.name, run.valid FROM users, run, platform, category WHERE run.user_id = users.id AND platform_id = platform.id AND run.game_id = '.$game.' AND run.category_id = '.$category.' ORDER BY run.time;';
         $statement = $db->query($query);
 
+        $table='<tr><th>User</th><th>Time</th><th>Platform</th><th>Validity</th></tr>';
         while ($row = $statement->fetch(PDO::FETCH_ASSOC))
         {
-            echo '<tr><td>'.$row['username'].'</td><td>'.$row['title'].'</td><td>'.$row['category_title'].'</td><td>'.formatTime($row['time']).'</td><td>'.$row['name'].'</td>'.valitity($row['valid']).'</td></tr>';
+                $table+='<tr><td>'.$row['username'].'</td><td>'.formatTime($row['time']).'</td><td>'.$row['name'].'</td>'.valitity($row['valid']).'</td></tr>';
         }
+        echo $table;
     }
 
     function formatTime($time){
