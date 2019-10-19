@@ -43,10 +43,12 @@ function generateTable(){
         xhr.onreadystatechange = function () {
             if (xhr.readyState == 4 && xhr.status == 200) {
                 document.getElementById('runTable').innerHTML = xhr.responseText;
-                console.log(xhr.responseText);
             }
         }
         xhr.open("GET", queryString, true);
         xhr.send();
+    }
+    else{
+        document.getElementById('runTable').innerHTML='';
     }
 }
