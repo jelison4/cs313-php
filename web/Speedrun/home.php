@@ -39,7 +39,7 @@
     </table>
     <table id='runTable'></table>
     
-    <form action='submission.php'><input type="submit"value='Submit Run'/></form>
+    <form action='submit.php'><input type="submit"value='Submit Run'/></form>
 
     </div>
 </body>

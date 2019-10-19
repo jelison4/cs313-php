@@ -1,10 +1,13 @@
 <?php
+    // Connect to the database
     require "databaseConnect.php";
     $db = get_db();
 
+    // get the query variables
     $game=$_GET['gameID'];
     $category=$_GET['catID'];
 
+    // if the category is category.id it means that the 'All' option was selected
     if($category!='category.id'){
         $query='SELECT DISTINCT users.username, run.time, platform.name, run.valid, game.title, category.category_title FROM users, run, platform, category, game WHERE run.user_id = users.id AND platform_id = platform.id AND run.game_id = '.$game.' AND run.category_id = '.$category.' AND category.id = '.$category.' AND game.id='.$game.'ORDER BY run.time;';
         $statement = $db->query($query);
@@ -34,7 +37,7 @@
         }
     }
     
-
+    // Trims the leading 0's and :'s
     function formatTime($time){
         $fTime = ltrim($time, "0");
         $fTime = ltrim($fTime, ":");
@@ -43,6 +46,7 @@
         return $fTime;
     }
 
+    // changes the bool value for valid into text and 
     function valitity($valid){
         $status=null;
         If($valid==1){
