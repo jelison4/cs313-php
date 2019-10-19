@@ -16,10 +16,10 @@
        }
     }
     else{
-        $query='SELECT DISTINCT users.username, run.time, category.category_title, platform.name, run.valid FROM users, run, platform, category WHERE run.user_id = users.id AND platform_id = platform.id AND run.game_id = '.$game.' AND run.category_id = category.id ORDER BY run.time;';
+        $query='SELECT DISTINCT users.username, run.time, category.category_title, platform.name, run.valid, game.title, FROM users, run, platform, category WHERE run.user_id = users.id AND platform_id = platform.id AND run.game_id = '.$game.' AND run.category_id = category.id ORDER BY run.time;';
         $statement = $db->query($query);
         
-        echo '<tr><th>User</th><th>Time</th><th>Category</th><th>Platform</th><th>Validity</th></tr>';
+        echo '<tr><th colspan=5><h3>'.$row['title'].'</h3></th></tr><tr><th>User</th><th>Time</th><th>Category</th><th>Platform</th><th>Validity</th></tr>';
         while ($row = $statement->fetch(PDO::FETCH_ASSOC))
         {
             echo '<tr><td>'.$row['username'].'</td><td>'.formatTime($row['time']).'</td><td>'. $row['category_title'] .'</td><td>'.$row['name'].'</td>'.valitity($row['valid']).'</td></tr>';
