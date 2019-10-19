@@ -17,7 +17,7 @@ function generateCatDropdown(){
                 categorys = JSON.parse(xhr.responseText);
                 console.log(categorys);
 //'runCategory'
-                var categoryDropdown = <option value=''>Select a Category</option>;
+                var categoryDropdown = '<option value=''>Select a Category</option>';
                 categorys.forEach(element => {
                     categoryDropdown +="<option value=" + element.id  + ">" + element.name + "</option>";
                 });
