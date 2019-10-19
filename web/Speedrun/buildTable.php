@@ -9,9 +9,9 @@
     $query='SELECT DISTINCT users.username, run.time, platform.name, run.valid FROM users, run, platform, category WHERE run.user_id = users.id AND platform_id = platform.id AND run.game_id = '.$game.' AND run.category_id = '.$category.' ORDER BY run.time;';
     $statement = $db->query($query);
 
-    echo $query;
+    //echo $query;
 
-    $table='<tr><th>User</th><th>Time</th><th>Platform</th><th>Validity</th></tr>';
+    echo '<tr><th>User</th><th>Time</th><th>Platform</th><th>Validity</th></tr>';
     while ($row = $statement->fetch(PDO::FETCH_ASSOC))
     {
         //$table+='<tr><td>'.$row['username'].'</td><td>'.formatTime($row['time']).'</td><td>'.$row['name'].'</td>'.valitity($row['valid']).'</td></tr>';
