@@ -25,7 +25,7 @@
 </head>
 <body>
     <header class='full-width-borders'>
-      <h1><div class='wrap'>SPEEDRUN!!!!(Working Title)</div></h1>
+      <h1>SPEEDRUN!!!!(Working Title)</h1>
     </header>
 
     <div class='background'>
@@ -39,7 +39,7 @@
     </table>
     <table id='runTable'></table>
     
-    <button href="submition.php">Submit Run</button>
+    <button href="submission.php">Submit Run</button>
 
     </div>
 </body>
