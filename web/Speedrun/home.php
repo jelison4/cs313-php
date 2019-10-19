@@ -31,8 +31,10 @@
     <div class='background'>
     <table>
         <tr>
-            <td colspan="3"><select id='gameSelect' onChange='generateCatDropdown()'><option value='0'>Select a Game</option><?php generateGameDropdown(); ?></select></td>
-            <td colspan="3"><select id='runCategory' onChange='generateTable()'><option value=''>Select a Category</option></select></td>
+            <td><strong>Select a game:</strong></td>
+            <td><select id='gameSelect' onChange='generateCatDropdown()'><option value='0'>Select a Game</option><?php generateGameDropdown(); ?></select></td>
+            <td><strong>Select a category type:</strong></td>
+            <td><select id='runCategory' onChange='generateTable()'><option value=''>Select a Category</option></select></td>
         </tr>
     </table>
     <table id='runTable'></table>
