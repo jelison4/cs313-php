@@ -19,12 +19,12 @@
  
   $statement = $db->query($gameQuery);
 
-  $categorys = null;
+  $categorys = array();
   while ($row = $statement->fetch(PDO::FETCH_ASSOC))
   {
     $cat=new category($row['category_id'], $row['category_title']);
 
-    if($categorys == null){
+    if(empty($categorys)){
       $categorys = array($cat);
     }
     else{
