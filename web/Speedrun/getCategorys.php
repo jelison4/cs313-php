@@ -8,11 +8,18 @@
   
   $statement = $db->query($gameQuery);
 
+  $count = 1;
   $categorys = null;
   while ($row = $statement->fetch(PDO::FETCH_ASSOC))
   {
-    $categorys += $row['category_title'].' ';
+    if($count==1){
+      $categorys = array('category_'.$count=>$row['category_title']);
+    }
+    else{
+      $categorys = array('category_'.$count=>$row['category_title']);
+    }
+    $count+=1;
   }
 
-  return $categorys;
+  echo json_encode($categorys);
 ?>
