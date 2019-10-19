@@ -19,7 +19,7 @@
  
   $statement = $db->query($gameQuery);
 
-  $categorys = array();
+  $categorys = null;
   while ($row = $statement->fetch(PDO::FETCH_ASSOC))
   {
     $cat=new category($row['category_id'], $row['category_title']);
