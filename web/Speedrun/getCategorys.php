@@ -21,5 +21,5 @@
     $count+=1;
   }
 
-  echo json_encode($categorys);
+  //echo json_encode($categorys);
 ?>
