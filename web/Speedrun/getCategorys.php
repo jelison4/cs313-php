@@ -3,7 +3,7 @@
     public $id;
     public $name;
 
-    function __construct1($id, $name)
+    public function category($id, $name)
     {
       $this->id = $id;
       $this->name = $name;
