@@ -38,6 +38,9 @@
         </tr>
     </table>
     <table id='runTable'></table>
+    
+    <button onclick="submition.php">Submit Run</button>
+
     </div>
 </body>
 </html>
