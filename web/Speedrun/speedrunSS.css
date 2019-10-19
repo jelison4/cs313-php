@@ -27,6 +27,19 @@ body{
     width:calc(100% + 4px);
     height:calc(100% + 4px);
     z-index: -1;
+    animation: animate 20s linear infinite;
+}
+@keyframes animate{
+    0%{
+        background-position: 0 0;
+    }
+    50%{
+        background-position: 400% 0;
+    }
+    100%{
+        background-position: 0 0;
+    }
+    
 }
 
 table{
