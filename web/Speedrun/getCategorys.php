@@ -19,22 +19,14 @@
  
   $statement = $db->query($gameQuery);
 
-  $categorys = null;
+  $categorys = array();
   $count=0;
   while ($row = $statement->fetch(PDO::FETCH_ASSOC))
   {
     $cat=new category($row['category_id'], $row['category_title']);
-
-    if($count==0){
-      $categorys = array($cat);
-      $count=1;
-      //$categorys.array_push($cat);
-    }
-    if($count!=0){
-      //$categorys = array($cat);
-      $categorys.array_push($cat);
-    }
+    $categorys.array_push($cat);
     unset($cat);
   }
 
   echo json_encode($categorys);
+?>
