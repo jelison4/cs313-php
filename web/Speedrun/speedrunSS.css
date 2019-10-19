@@ -1,12 +1,12 @@
 h1{
-    color: black;
+    color: whitesmoke;
     text-align: center;
     margin: 0;
     padding: 25px 0px;
 }
 
 body{
-    background-color:#d9d9d9;
+    background-color:black;
     width: 900px;
     margin: 0 auto;
 }
@@ -14,7 +14,7 @@ body{
 .background{
     background-color: white;
     margin: 0 auto;
-    box-shadow: 5px 5px 10px greenyellow;
+    box-shadow: 5px 5px 5px greenyellow;
 }
 
 table{
