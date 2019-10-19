@@ -27,6 +27,8 @@ function generateCatDropdown(){
                     }
                 });
                 console.log(categoryDropdown);
+
+                document.getElementById('runCategory').innerHTML = categoryDropdown;
             }
         }
         xhr.open("GET", queryString, false);
