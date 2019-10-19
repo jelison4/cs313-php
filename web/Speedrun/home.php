@@ -10,6 +10,11 @@
         {
             echo '<tr><td>'.$row['username'].'</td><td>'.$row['title'].'</td><td>'.$row['category_title'].'</td><td>'.formatTime($row['time']).'</td><td>'.$row['name'].'</td>'.valitity($row['valid']).'</td></tr>';
         }
+
+        $game=1;
+        $gameQuery='SELECT DISTINCT run.category_id, category.category_title FROM run, category WHERE run.category_id = category.id AND run.game_id='.$game.';';
+
+        var_dump($gameQuery);
     }
 
     function formatTime($time){
