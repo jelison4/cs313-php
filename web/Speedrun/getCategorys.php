@@ -30,7 +30,7 @@
       $count=1;
       //$categorys.array_push($cat);
     }
-    else{
+    if($count!=0){
       //$categorys = array($cat);
       $categorys.array_push($cat);
     }
