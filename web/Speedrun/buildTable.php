@@ -12,7 +12,7 @@
         echo '<tr><th>User</th><th>Time</th><th>Platform</th><th>Validity</th></tr>';
         while ($row = $statement->fetch(PDO::FETCH_ASSOC))
         {
-            echo '<tr><td>'.$row['username'].'</td><td>'.formatTime($row['time']).'</td><td>'.$row['name'].'</td><td>'.valitity($row['valid']).'</td></tr>';
+            echo '<tr><td>'.$row['username'].'</td><td>'.formatTime($row['time']).'</td><td>'.$row['name'].'</td>'.valitity($row['valid']).'</td></tr>';
        }
     }
     else{
