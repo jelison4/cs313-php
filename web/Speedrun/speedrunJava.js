@@ -27,6 +27,7 @@ function generateCatDropdown() {
         xhr.send();
     }
     if (gameID == 0) {
+        document.getElementById('runTable').innerHTML='';
         document.getElementById('runCategory').innerHTML = '<option value="0">-</option>';
     }
 }
