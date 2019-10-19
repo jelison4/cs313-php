@@ -6,14 +6,14 @@
     $category=$_GET['catID'];
 
     if($category!='category.id'){
-        $query='SELECT DISTINCT users.username, run.time, platform.name, run.valid, game.title FROM users, run, platform, category, game WHERE run.user_id = users.id AND platform_id = platform.id AND run.game_id = '.$game.' AND run.category_id = '.$category.' AND game.id='.$game.'ORDER BY run.time;';
+        $query='SELECT DISTINCT users.username, run.time, platform.name, run.valid, game.title, category.category_title FROM users, run, platform, category, game WHERE run.user_id = users.id AND platform_id = platform.id AND run.game_id = '.$game.' AND run.category_id = '.$category.' AND category.category_title = '.$category.' AND game.id='.$game.'ORDER BY run.time;';
         $statement = $db->query($query);
 
         $title=0;
         while ($row = $statement->fetch(PDO::FETCH_ASSOC))
         {
             if($title==0){
-                echo '<tr><th colspan=5><h2>'.$row['title'].' - '.$category.'</h2></th></tr><tr><th>User</th><th>Time</th><th>Platform</th><th>Validity</th></tr>';
+                echo '<tr><th colspan=5><h2>'.$row['title'].' - '.$row['category_title'].'</h2></th></tr><tr><th>User</th><th>Time</th><th>Platform</th><th>Validity</th></tr>';
                 $title=1;
             }
             echo '<tr><td>'.$row['username'].'</td><td>'.formatTime($row['time']).'</td><td>'.$row['name'].'</td>'.valitity($row['valid']).'</td></tr>';
