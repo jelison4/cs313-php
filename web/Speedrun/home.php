@@ -39,7 +39,7 @@
     </table>
     <table id='runTable'></table>
     
-    <button href="submission.php">Submit Run</button>
+    <input type="submit" onsubmit='submission.php' value='Submit Run'/>
 
     </div>
 </body>
