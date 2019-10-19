@@ -3,7 +3,6 @@ function generateCatDropdown(){
     if(gameID!=0){
         var queryString='getCategorys.php?gameID='+gameID;
 
-
         var gameID=document.getElementById('gameSelect').value;
 
         var queryString='getCategorys.php?gameID='+gameID;
