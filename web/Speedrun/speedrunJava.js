@@ -16,12 +16,12 @@ function generateCatDropdown(){
             if (xhr.readyState==4 && xhr.status==200){
                 categorys = JSON.parse(xhr.responseText);
                 console.log(categorys);
-/*//'runCategory'
+//'runCategory'
                 var categoryDropdown;
                 categorys.forEach(element => {
-                    categoryDropdown +=3;
+                    categoryDropdown +="<option value=" + element.id  + ">" + element.name + "</option>";
                 });
-                */
+                console.log(categoryDropdown);
             }
         }
         xhr.open("GET", queryString, false);
