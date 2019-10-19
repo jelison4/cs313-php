@@ -28,13 +28,14 @@
       <h1><div class='wrap'>SPEEDRUN!!!!(Working Title)</div></h1>
     </header>
 
-    <table id=runTable>
+    <div class='background'>
+    <table>
         <tr>
             <td colspan="3"><select id='gameSelect' onChange='generateCatDropdown()'><option value='0'>Select a Game</option><?php generateGameDropdown(); ?></select></td>
             <td colspan="3"><select id='runCategory'><option value=''>Select a Category</option></select></td>
         </tr>
-        <tr><th>User</th><th>Game</th><th>Category</th><th>Time</th><th>Platform</th><th>Validation</th></tr>
-
     </table>
+    <table id='runTable'><tr><td>Does this look ok?</td></tr></table>
+    </div>
 </body>
 </html>
