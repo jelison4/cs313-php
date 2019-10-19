@@ -24,7 +24,14 @@
   while ($row = $statement->fetch(PDO::FETCH_ASSOC))
   {
     $cat=new category($row['category_id'], $row['category_title']);
-    $categorys.array_push($cat);
+
+    if(empty($categorys)){
+      $categorys = array($cat);
+    }
+    else{
+      array_push($categorys, $cat);
+    }
+    
     unset($cat);
   }
 
