@@ -9,12 +9,18 @@ function generateCatDropdown() {
             if (xhr.readyState == 4 && xhr.status == 200) {
                 categorys = JSON.parse(xhr.responseText);
 
-                var categoryDropdown = '<option value="category.id">All</option>';
+                var categoryDropdown = null;
                 categorys.forEach(element => {
-                    categoryDropdown += "<option value=" + element.id + ">" + element.name + "</option>";
+                    if(categoryDropdown==null){
+                        categoryDropdown = "<option value=" + element.id + ">" + element.name + "</option>";
+                    }
+                    else{
+                        categoryDropdown += "<option value=" + element.id + ">" + element.name + "</option>";
+                    }
                 });
 
                 document.getElementById('runCategory').innerHTML = categoryDropdown;
+                generateTable();
             }
         }
         xhr.open("GET", queryString, false);
@@ -23,7 +29,6 @@ function generateCatDropdown() {
     if (gameID == 0) {
         document.getElementById('runCategory').innerHTML = '<option value="0">Select a Category</option>';
     }
-    generateTable();
 }
 
 function generateTable(){
