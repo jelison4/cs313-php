@@ -42,6 +42,7 @@
         <form>
             <table>
                 <tr><td class='col1'>Username:</td><td class='col2'><input type='text' id='username'></td></tr>
+                <tr><td class='col1'>Time:</td><td class='col2'><input type='text' id='time'></td></tr>
                 <tr><td class='col1'>Game:</td><td class='col2'><select id='gameSelect' onChange='generateCatDropdown()'><?php generateGameDropdown(); ?></select></td></tr>
                 <tr><td class='col1'>Run Catagory:</td><td class='col2'><select id='runCategory'></select></td></tr>
                 <tr><td class='col1'>Platform:</td><td class='col2'><select><?php generatePlatformDropdown(); ?></select></td></tr>
