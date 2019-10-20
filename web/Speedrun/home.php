@@ -24,7 +24,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <header class='full-width-borders'>
+    <header>
       <h1>SPEEDRUN!!!!(Working Title)</h1>
     </header>
 
