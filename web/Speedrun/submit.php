@@ -32,8 +32,8 @@
         <form>
             <table>
                 <tr><td>Username:</td><td><input type='text' id='username'></td></tr>
-                <tr><td>Game:</td><td><select id='gameSelect' onChange='generateCatDropdown()'><?php generateGameDropdown() ?></select></td></tr>
-                <tr><td id='runCategory'>Run Catagory:</td></tr>
+                <tr><td>Game:</td><td><select id='gameSelect' onChange='generateCatDropdown()'><?php generateGameDropdown(); ?></select></td></tr>
+                <tr><td>Run Catagory:</td><td><select id='runCategory'></select></td></tr>
             </table>
         </form>
     </div>
