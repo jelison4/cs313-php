@@ -26,7 +26,7 @@ function generateCatDropdown() {
         xhr.open("GET", queryString, false);
         xhr.send();
     }
-    if (gameID == 0) {
+    if (gameID == 0 && document.getElementById('runTable') != null) {
         document.getElementById('runTable').innerHTML='';
         document.getElementById('runCategory').innerHTML = '<option value="0">-</option>';
     }
