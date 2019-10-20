@@ -12,6 +12,16 @@
         }
     }
 
+    function generatePlatformDropdown(){
+        $db = get_db();
+        $gameQuery='SELECT * FROM platform';
+        $statement = $db->query($gameQuery);
+
+        while ($row = $statement->fetch(PDO::FETCH_ASSOC))
+        {
+            echo "<option value=" . $row['id']  . ">" . $row['name'] . "</option>";
+        }
+    }
 ?>
 
 <!DOCTYPE html>
@@ -31,9 +41,10 @@
     <div class='background'>
         <form>
             <table>
-                <tr><td>Username:</td><td><input type='text' id='username'></td></tr>
+                <tr><td class='col1'>Username:</td><td class='col2'><input type='text' id='username'></td></tr>
                 <tr><td>Game:</td><td><select id='gameSelect' onChange='generateCatDropdown()'><?php generateGameDropdown(); ?></select></td></tr>
                 <tr><td>Run Catagory:</td><td><select id='runCategory'></select></td></tr>
+                <tr><td>Platform:</td><td><select><?php generatePlatformDropdown(); ?></select></td></tr>
             </table>
         </form>
     </div>

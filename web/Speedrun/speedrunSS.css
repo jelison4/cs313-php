@@ -73,3 +73,11 @@ form{
 .invalid{
     color: red;
 }
+
+.col1{
+    text-align: left;
+}
+
+.col2{
+    text-align: right;
+}
