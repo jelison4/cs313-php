@@ -39,6 +39,8 @@
     </table>
     <table id='runTable'></table>
     
+    'PC''Playstation 4' 'Xbox One' 'Nintendo Switch' 'Nintendo 64' 'Super Nintendo'
+
     <form action='submit.php'><input type="submit"value='Submit Run'/></form>
 
     </div>
