@@ -10,6 +10,10 @@ function generateCatDropdown() {
                 categorys = JSON.parse(xhr.responseText);
 
                 var categoryDropdown = null;
+                if(document.getElementById('runTable') != null){
+                    var categoryDropdown = "<option value=category.id>All</option>";
+                }
+                
                 categorys.forEach(element => {
                     if(categoryDropdown==null){
                         categoryDropdown = "<option value=" + element.id + ">" + element.name + "</option>";
