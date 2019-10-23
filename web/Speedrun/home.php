@@ -1,4 +1,4 @@
-<?php require 'dropdowns.php'; ?>
+<?php require 'dropdowns.php' ?>
 
 <!DOCTYPE html>
 <html lang="en-us">
