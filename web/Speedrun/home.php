@@ -26,11 +26,14 @@
             <td><select id='runCategory' onChange='generateTable()'><option value=''>-</option></select></td>
         </tr>
     </table>
+    
     <table id='runTable'></table>
     
+    <button onclick='submit()'>Submit Run</button>
+
     </div>
 
-    <button textalign='center' class='background' onclick='submit()'>Submit Run</button>
+    
 
 </body>
 </html>
