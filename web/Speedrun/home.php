@@ -29,7 +29,7 @@
     
     <table id='runTable'></table>
     
-    <div class='center_button'><button onclick='submit()'>Login</button></div>
+    <div class='center_button'><button onclick='submit()'>Login</button><button onclick='submit()'>Register</button></div>
     </div>
 
     
