@@ -1,17 +1,5 @@
 <?php
-    require "databaseConnect.php";
-
-    function generateGameDropdown(){
-        $db = get_db();
-        $gameQuery='SELECT DISTINCT run.game_id, game.title FROM run, game WHERE run.game_id = game.id ORDER BY game.title';
-        $statement = $db->query($gameQuery);
-
-        while ($row = $statement->fetch(PDO::FETCH_ASSOC))
-        {
-            echo "<option value=" . $row['game_id']  . ">" . $row['title'] . "</option>";
-        }
-    }
-
+    require 'dropdowns.php';
 ?>
 
 <!DOCTYPE html>
