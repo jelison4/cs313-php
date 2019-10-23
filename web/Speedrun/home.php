@@ -27,8 +27,11 @@
         </tr>
     </table>
     <table id='runTable'></table>
-    <button onclick='submit()'>Submit Run</button>
+    
 
     </div>
+
+    <button class='background' onclick='submit()'>Submit Run</button>
+
 </body>
 </html>
