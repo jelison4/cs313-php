@@ -1,4 +1,4 @@
-CREATE TABLE "users" ("id" SERIAL PRIMARY KEY, "username" varchar);
+CREATE TABLE "users" ("id" SERIAL PRIMARY KEY, "username" varchar, "password" varchar, "admin" boolean);
 CREATE TABLE "run" ("id" SERIAL PRIMARY KEY, "user_id" int, "game_id" int, "platform_id" int, "time" varchar, "valid" boolean,  "category_id" int);
 CREATE TABLE "game" ("id" SERIAL PRIMARY KEY, "title" varchar);
 CREATE TABLE "category" ("id" SERIAL PRIMARY KEY, "category_title" varchar);
@@ -35,20 +35,13 @@ INSERT INTO game (title) VALUES ('Trine 2');
 INSERT INTO game (title) VALUES ('Portal');
 
 /* Inserting Users */
-INSERT INTO users (username) VALUES ('Cadfel');
-INSERT INTO users (username) VALUES ('Distortion2');
-INSERT INTO users (username) VALUES ('LilAggy');
-INSERT INTO users (username) VALUES ('sTaTic_dr0P');
-INSERT INTO users (username) VALUES ('Scooch');
-INSERT INTO users (username) VALUES ('FUSTERCLUCK');
-INSERT INTO users (username) VALUES ('rtyler91');
-INSERT INTO users (username) VALUES ('thefezz');
-INSERT INTO users (username) VALUES ('Shorty Da Moose');
-INSERT INTO users (username) VALUES ('Alexden96');
-INSERT INTO users (username) VALUES ('ScoutATB');
-INSERT INTO users (username) VALUES ('Devilteeth');
-INSERT INTO users (username) VALUES ('Sacaix');
-INSERT INTO users (username) VALUES ('jester1570');
+INSERT INTO users (username, password, admin) VALUES ('admin', 'CS313', True);
+INSERT INTO users (username, password, admin) VALUES ('Cadfel', 'password', False);
+INSERT INTO users (username, password, admin) VALUES ('Distortion2', '123qwe,./', False);
+INSERT INTO users (username, password, admin) VALUES ('LilAggy', 'stuff', False);
+INSERT INTO users (username, password, admin) VALUES ('sTaTic_dr0P', 'junk', False);
+INSERT INTO users (username, password, admin) VALUES ('Shorty Da Moose', 'nerd', False);
+INSERT INTO users (username, password, admin) VALUES ('Alexden96', 'hotstuff4242', False);
 
 /* Inserting categories*/
 INSERT INTO category (category_title) VALUES ('100%');
@@ -58,15 +51,15 @@ INSERT INTO category (category_title) VALUES ('Glitchless');
 INSERT INTO category (category_title) VALUES ('Out of Bounds');
 
 /* Inserting runs*/
-INSERT INTO run (user_id, game_id, platform_id, time, valid, category_id) VALUES (1, 1, 1, '00:21:42', True, 2);
-INSERT INTO run (user_id, game_id, platform_id, time, valid, category_id) VALUES (2, 1, 2, '00:19:55', True, 2);
-INSERT INTO run (user_id, game_id, platform_id, time, valid, category_id) VALUES (4, 4, 6, '01:41:30', True, 1);
-INSERT INTO run (user_id, game_id, platform_id, time, valid, category_id) VALUES (10, 16, 1, '00:16:14', True, 4);
-INSERT INTO run (user_id, game_id, platform_id, time, valid, category_id) VALUES (10, 16, 1, '00:07:46', True, 5);
-INSERT INTO run (user_id, game_id, platform_id, time, valid, category_id) VALUES (3, 1, 2, '00:25:35', False, 2);
-INSERT INTO run (user_id, game_id, platform_id, time, valid, category_id) VALUES (9, 5, 4, '00:34:17', True, 2);
-INSERT INTO run (user_id, game_id, platform_id, time, valid, category_id) VALUES (1, 1, 1, '03:54:39', True, 4);
-INSERT INTO run (user_id, game_id, platform_id, time, valid, category_id) VALUES (1, 1, 1, '01:13:45', True, 3);
+INSERT INTO run (user_id, game_id, platform_id, time, valid, category_id) VALUES (2, 1, 1, '00:21:42', True, 2);
+INSERT INTO run (user_id, game_id, platform_id, time, valid, category_id) VALUES (3, 1, 2, '00:19:55', True, 2);
+INSERT INTO run (user_id, game_id, platform_id, time, valid, category_id) VALUES (5, 4, 6, '01:41:30', True, 1);
+INSERT INTO run (user_id, game_id, platform_id, time, valid, category_id) VALUES (7, 16, 1, '00:16:14', True, 4);
+INSERT INTO run (user_id, game_id, platform_id, time, valid, category_id) VALUES (7, 16, 1, '00:07:46', True, 5);
+INSERT INTO run (user_id, game_id, platform_id, time, valid, category_id) VALUES (4, 1, 2, '00:25:35', False, 2);
+INSERT INTO run (user_id, game_id, platform_id, time, valid, category_id) VALUES (6, 5, 4, '00:34:17', True, 2);
+INSERT INTO run (user_id, game_id, platform_id, time, valid, category_id) VALUES (2, 1, 1, '03:54:39', True, 4);
+INSERT INTO run (user_id, game_id, platform_id, time, valid, category_id) VALUES (2, 1, 1, '01:13:45', True, 3);
 
 /* Displaying table with | username | Game | Category | Time | Platform | Validated | */
 SELECT users.username, game.title, category.category_title, run.time, platform.name, run.valid FROM users, run, platform, game, category WHERE run.user_id = users.id AND platform_id = platform.id AND run.game_id = game.id AND run.category_id = category.id ORDER BY run.time;
@@ -75,3 +68,4 @@ SELECT users.username, game.title, category.category_title, run.time, platform.n
 SELECT DISTINCT run.game_id, game.title FROM run, game WHERE run.game_id = game.id ORDER BY game.title;
 SELECT DISTINCT run.category_id, category.category_title FROM run, category WHERE run.category_id = category.id AND run.game_id=16;
 SELECT DISTINCT users.username, run.time, category.category_title, platform.name, run.valid FROM users, run, platform, category WHERE run.user_id = users.id AND platform_id = platform.id AND run.game_id = 1 AND run.category_id = category.id ORDER BY run.time;
+SELECT * from users WHERE username='Cadfel';
