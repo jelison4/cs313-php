@@ -1,6 +1,7 @@
 <?php
     require "databaseConnect.php";
-
+    require 'dropdowns.php';
+/*
     function generateGameDropdown(){
         $db = get_db();
         $gameQuery='SELECT DISTINCT run.game_id, game.title FROM run, game WHERE run.game_id = game.id ORDER BY game.title';
@@ -22,6 +23,7 @@
             echo "<option value=" . $row['id']  . ">" . $row['name'] . "</option>";
         }
     }
+    */
 ?>
 
 <!DOCTYPE html>
