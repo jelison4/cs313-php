@@ -1,4 +1,6 @@
 <?php
+require 'databaseConnect.php';
+
 function generateGameDropdown(){
     $db = get_db();
     $gameQuery='SELECT DISTINCT run.game_id, game.title FROM run, game WHERE run.game_id = game.id ORDER BY game.title';
