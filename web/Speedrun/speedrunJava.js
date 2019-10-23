@@ -57,3 +57,7 @@ function generateTable(){
         document.getElementById('runTable').innerHTML='';
     }
 }
+
+function submit(){
+    console.log('It works I guess');
+}

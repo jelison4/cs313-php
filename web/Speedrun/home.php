@@ -27,7 +27,7 @@
         </tr>
     </table>
     <table id='runTable'></table>
-    <form action='submit.php'><button type="submit">Submit Run</button></form>
+    <button onclick='submit()'>Submit Run</button>
 
     </div>
 </body>
