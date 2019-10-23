@@ -19,8 +19,8 @@ body{
 button {
     background-color: black;
     color: white;
-    padding: 14px 20px;
-    margin: 9px 45%;
+    padding: 10px 10px;
+    margin: 9px 50%;
     border: none;
     cursor: pointer;
 }
