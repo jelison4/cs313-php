@@ -1,6 +1,6 @@
 <?php
     require "databaseConnect.php";
-    require 'dropdowns.php';
+    require "dropdowns.php";
 /*
     function generateGameDropdown(){
         $db = get_db();

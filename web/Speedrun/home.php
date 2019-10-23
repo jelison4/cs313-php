@@ -1,5 +1,5 @@
 <?php 
-  require 'dropdowns.php';
+  require "dropdowns.php";
   generateGameDropdown();
 ?>
 
