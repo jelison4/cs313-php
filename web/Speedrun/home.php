@@ -32,7 +32,7 @@
       <br>
       <table>
           <tr>
-            <td><button class='col1' onclick="">Login</button></td>
+            <td><button class='col1' onclick="document.getElementById('id01').style.display='none'">Login</button></td>
             <td><button class='col2' onclick=''>Register</button></td>
           </tr>
       </table>
@@ -87,9 +87,6 @@ class="close" title="Close Modal">&times;</span>
       <input type="password" placeholder="Enter Password" name="psw" required>
 
       <button type="submit">Login</button>
-      <label>
-        <input type="checkbox" checked="checked" name="remember"> Remember me
-      </label>
     </div>
 
     <div class="container" style="background-color:#f1f1f1">
