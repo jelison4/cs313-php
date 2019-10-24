@@ -7,5 +7,7 @@
 
   $query="INSERT INTO users (username, password, admin) VALUES ("."'".$name."'".", '".$password."', False);";
 
+  echo $query;
+
   $db->query($query);
 ?>

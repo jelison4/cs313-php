@@ -72,6 +72,7 @@ function registerUser(){
 
         xhr.onreadystatechange = function () {
             if (xhr.readyState == 4 && xhr.status == 200) {
+                alert(xhr.responseText);
             }
         }
         xhr.open("POST", queryString, true);
