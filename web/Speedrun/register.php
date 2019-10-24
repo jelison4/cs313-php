@@ -17,10 +17,10 @@
     </header>
 
     <div class='background'>
-        <form onsubmit="validate()">
+        <form id='register' onsubmit="validate()">
             <table>
                 <tr><td class='col1'><b>Username:</b></td><td><input type="text" name="uname" id='uname' required></td></tr>
-                <tr><td class='col1'><b>Password:</b></td><td><input type="password1" name="password" id="password1" required></td></tr>
+                <tr><td class='col1'><b>Password:</b></td><td><input type="password" name="password1" id="password1" required></td></tr>
                 <tr><td class='col1'><b>Confirm Password:</b></td><td><input type="password" name="password2" id="password2" required></td></tr>
                 <tr><td colspan="2"><button style="text-align:center" type="submit">Register</button></td></tr>
             </table>
