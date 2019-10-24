@@ -43,7 +43,7 @@
   
   <form action="login.php" method="post">
     <div class="imgcontainer">
-      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal"></span>
+      <span onclick="document.getElementById('login').style.display='none'" class="close" title="Close Modal"></span>
     </div>
 
     <div class="container">
@@ -57,13 +57,13 @@
     </div>
 
     <div class="container" style="background-color:#f1f1f1">
-      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <button type="button" onclick="document.getElementById('login').style.display='none'" class="cancelbtn">Cancel</button>
     </div>
   </form>
 
   <script>
 // Get the modal
-var modal = document.getElementById('id01');
+var modal = document.getElementById('login');
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
