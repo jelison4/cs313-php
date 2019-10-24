@@ -1,6 +1,5 @@
 <?php 
   require "dropdowns.php";
-  generateGameDropdown();
 ?>
 
 <!DOCTYPE html>
