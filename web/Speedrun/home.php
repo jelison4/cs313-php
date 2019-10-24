@@ -58,10 +58,11 @@ class="close" title="Close Modal">&times;</span>
       <label for="psw"><b>Password</b></label>
       <input type="password" placeholder="Enter Password" name="psw" required>
 
-      <button type="submit">Login</button>
+      <!--<button type="submit">Login</button>-->
     </div>
 
     <div class="container" style="background-color:#f1f1f1">
+      <button type="submit">Login</button>
       <button type="button" onclick="document.getElementById('login').style.display='none'" class="cancelbtn">Cancel</button>
     </div>
   </form>
