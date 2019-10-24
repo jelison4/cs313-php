@@ -18,24 +18,23 @@
     </header>
 
     <div class='background'>
-    <table>
+      <table>
         <tr>
             <td><strong>Select a game:</strong></td>
             <td><select id='gameSelect' onChange='generateCatDropdown()'><option value='0'>Select a Game</option><?php generateGameDropdown(); ?></select></td>
             <td><strong>Filter by category type:</strong></td>
             <td><select id='runCategory' onChange='generateTable()'><option value=''>-</option></select></td>
         </tr>
-    </table>
+      </table>
     
-    <table id='runTable'></table>
-    <br>
-    <table>
-        <tr>
-          <td><button class='col1' onclick='submit()'>Login</button></td>
-          <td><button class='col2' onclick='submit()'>Register</button></td>
-        </tr>
-    </table>
-    <br>
+      <table id='runTable'></table>
+      <br>
+      <table>
+          <tr>
+            <td><button class='col1' onclick='submit()'>Login</button></td>
+            <td><button class='col2' onclick='submit()'>Register</button></td>
+          </tr>
+      </table>
     </div>
 
     
