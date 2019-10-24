@@ -24,11 +24,6 @@ button {
     cursor: pointer;
 }
 
-.center_button{
-    text-align: center;
-    padding: 10px 5px;
-}
-
 .background{
     background-color: white;
     margin: 0 auto;
