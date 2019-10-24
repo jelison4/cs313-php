@@ -39,7 +39,7 @@
     </div>
 
 
-    <div id="login" class="modal">
+    <div id="login" class="modal background">
       <span onclick="document.getElementById('login').style.display='none'" class="close" title="Close Modal">&times;</span>
     
       <form class="modal-content" action="/action_page.php">
