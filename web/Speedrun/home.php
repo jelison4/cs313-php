@@ -63,7 +63,7 @@
     <div id="register" class="modal">
       <span onclick="document.getElementById('register').style.display='none'" class="close" title="Close Modal">&times;</span>
     
-      <form class="modal-content background" action="/action_page.php">
+      <form class="modal-content background" action="registerUser()">
     
         <div class="container">
           <h2>Create New Account</h2>
