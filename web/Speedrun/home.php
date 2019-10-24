@@ -33,7 +33,7 @@
       <table>
           <tr>
             <td><button class='col1' onclick="document.getElementById('login').style.display='block'">Login</button></td>
-            <td><button class='col2' href='register.php'>Register</button></td>
+            <td><button class='col2' onclick="window.location.href=register.php">Register</button></td>
           </tr>
       </table>
     </div>
