@@ -17,12 +17,11 @@
     </header>
 
     <div class='background'>
-        <form id='register' <?php//onsubmit="validate()"?>>
+        <form id='register' action='addUser.php'>
             <table>
                 <tr><td class='col1'><b>Username:</b></td><td><input type="text" name="uname" id='uname' required></td></tr>
                 <tr><td class='col1'><b>Password:</b></td><td><input type="password" name="password1" id="password1" required></td></tr>
-                <tr><td class='col1'><b>Confirm Password:</b></td><td><input type="password" name="password2" id="password2" required></td></tr>
-                <tr><td colspan="2"><button style="text-align:center" <?php//type="submit"?> onclick="validate()">Register</button></td></tr>
+                <tr><td colspan="2"><button style="text-align:center">Register</button></td></tr>
             </table>
         </form>    
     </div>

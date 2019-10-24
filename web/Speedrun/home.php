@@ -32,7 +32,7 @@
       <table>
           <tr>
             <td><button class='col1' onclick="document.getElementById('login').style.display='block'">Login</button></td>
-            <td><button class='col2' onclick="window.location.href='register.php'">Register</button></td>
+            <td><button class='col2' onclick="document.getElementById('login').style.display='register'">Register</button></td>
           </tr>
       </table>
     </div>
@@ -55,6 +55,28 @@
         <div class="container" style="background-color:#f1f1f1">
           <button type="submit">Login</button>
           <button type="button" onclick="document.getElementById('login').style.display='none'" class="cancelbtn">Cancel</button>
+        </div>
+      </form>
+    </div>
+
+    <div id="register" class="modal">
+      <span onclick="document.getElementById('register').style.display='none'" class="close" title="Close Modal">&times;</span>
+    
+      <form class="modal-content background" action="/action_page.php">
+    
+        <div class="container">
+          <h2>Create New Account</h2>
+          <label for="uname"><b>Username</b></label>
+          <input type="text" placeholder="Enter Username" name="uname" id='uname' required>
+    
+          <label for="password"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="password" id="password" required>
+    
+        </div>
+    
+        <div class="container" style="background-color:#f1f1f1">
+          <button type="submit">Login</button>
+          <button type="button" onclick="document.getElementById('register').style.display='none'" class="cancelbtn">Cancel</button>
         </div>
       </form>
     </div>
