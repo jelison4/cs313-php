@@ -30,6 +30,20 @@
         $db->query($query);
     }
   }
+
+  function hashPass(){
+    require 'databaseConnect.php';
+    $db=get_db();
+
+    $userQuery='SELECT * FROM users';
+    $statement = $db->query($userQuery);
+
+    while ($row = $statement->fetch(PDO::FETCH_ASSOC)){
+        $hash = password_hash($row['password'], PASSWORD_DEFAULT);
+        $hashQuery='UPDATE users SET password= "'.$hash.' WHERE id='.$row['id']+';';
+        $db->query($hashQuery);
+    }
+  }
 ?>
 
 <!DOCTYPE html>
@@ -46,7 +60,7 @@
         <h1>Working title</h2>
     </header>
 
-    <div class=background><?php addUser(); ?></div>
-    
+    <div class=background><?php addUser(); hashPass();?></div>
+
 </body>
 </html>
