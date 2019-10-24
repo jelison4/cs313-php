@@ -4,8 +4,9 @@
 
   $name=$_POST['uname'];
   $password=$_POST['password'];
+  $hash = password_hash($password, PASSWORD_DEFAULT);
 
-  $query="INSERT INTO users (username, password, admin) VALUES ("."'".$name."'".", '".$password."', False);";
+  $query="INSERT INTO users (username, password, admin) VALUES ("."'".$name."'".", '".$hash."', False);";
 
   echo $query;
 
@@ -23,7 +24,7 @@
 </head>
 <body>
     <header>
-        Working title
+        <h2>Working title</h2>
     </header>
 
 </body>
