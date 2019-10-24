@@ -32,7 +32,7 @@
       <br>
       <table>
           <tr>
-            <td><button class='col1' onclick="document.getElementById('id01').style.display='none'">Login</button></td>
+            <td><button class='col1' onclick="document.getElementById('id01').style.display='block'">Login</button></td>
             <td><button class='col2' onclick=''>Register</button></td>
           </tr>
       </table>
