@@ -57,3 +57,19 @@ function generateTable(){
         document.getElementById('runTable').innerHTML='';
     }
 }
+
+function createUser(){
+    var uname=document.getElementById('newName').value;
+    var pwd=document.getElementById('newPass').value;
+
+    queryString="addUser.php?uname='"+uname+"'&password="+"'"+pwd+"'";
+    var xhr = new XMLHttpRequest();
+
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState == 4 && xhr.status == 200) {
+            alert(xhr.responseText);
+        }
+    }
+    xhr.open("POST", queryString, true);
+    xhr.send();
+}

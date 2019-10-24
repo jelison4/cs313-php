@@ -1,5 +1,4 @@
 <?php
-  function addUser(){
     require 'databaseConnect.php';
     $db=get_db();
   
@@ -25,42 +24,10 @@
         $password=$_POST['password'];
         $hash = password_hash($password, PASSWORD_DEFAULT);
 
-        // Write user to database
+        // Add new user to database
         $query="INSERT INTO users (username, password, admin) VALUES ("."'".$name."'".", '".$hash."', False);";
         $db->query($query);
+
+        echo "Account created";
     }
-  }
-
-  function hashPass(){
-    require 'databaseConnect.php';
-    $db=get_db();
-
-    $userQuery='SELECT * FROM users';
-    $statement = $db->query($userQuery);
-
-    while ($row = $statement->fetch(PDO::FETCH_ASSOC)){
-        $hash = password_hash($row['password'], PASSWORD_DEFAULT);
-        $hashQuery='UPDATE users SET password= "'.$hash.' WHERE id='.$row['id']+';';
-        $db->query($hashQuery);
-    }
-  }
 ?>
-
-<!DOCTYPE html>
-<html lang="en-us">
-<head>
-  <meta charset="UTF-8">
-  <title>Speed Running!!</title>
-  <link rel="stylesheet" type="text/css" href="speedrunSS.css">
-  <script src="speedrunJava.js"></script>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body>
-    <header>
-        <h1>Working title</h2>
-    </header>
-
-    <div class=background><?php addUser(); hashPass();?></div>
-
-</body>
-</html>
