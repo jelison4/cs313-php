@@ -63,7 +63,7 @@
     <div id="register" class="modal">
       <span onclick="document.getElementById('register').style.display='none'" class="close" title="Close Modal">&times;</span>
     
-      <form class="modal-content background" action="registerUser()">
+      <form class="modal-content background" action=registerUser()>
     
         <div class="container">
           <h2>Create New Account</h2>
@@ -76,7 +76,7 @@
         </div>
     
         <div class="container" style="background-color:#f1f1f1">
-          <button type="submit">Register</button>
+          <button type="submit" onclick="document.getElementById('register').style.display='none'" >Register</button>
           <button type="button" onclick="document.getElementById('register').style.display='none'" class="cancelbtn">Cancel</button>
         </div>
       </form>

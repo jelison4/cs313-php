@@ -64,6 +64,10 @@ function registerUser(){
 
     var queryString=`addUser.php?newName=${newUser}&newPass=${newPass}`;
 
+    console.log(newUser);
+    console.log(newPass);
+    console.log(queryString);
+
     var xhr = new XMLHttpRequest();
 
         xhr.onreadystatechange = function () {
