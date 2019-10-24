@@ -44,6 +44,7 @@
       <form class="modal-content background" action="/action_page.php">
     
         <div class="container">
+        <h2>Login</h2>
           <label for="uname"><b>Username</b></label>
           <input type="text" placeholder="Enter Username" name="uname" id='uname' required>
     
@@ -67,15 +68,15 @@
         <div class="container">
           <h2>Create New Account</h2>
           <label for="uname"><b>Username</b></label>
-          <input type="text" placeholder="Enter Username" name="uname" id='uname' required>
+          <input type="text" placeholder="Enter Username" name="uname" id='newName' required>
     
           <label for="password"><b>Password</b></label>
-          <input type="password" placeholder="Enter Password" name="password" id="password" required>
+          <input type="password" placeholder="Enter Password" name="password" id="newPass" required>
     
         </div>
     
         <div class="container" style="background-color:#f1f1f1">
-          <button type="submit">Login</button>
+          <button type="submit">Register</button>
           <button type="button" onclick="document.getElementById('register').style.display='none'" class="cancelbtn">Cancel</button>
         </div>
       </form>

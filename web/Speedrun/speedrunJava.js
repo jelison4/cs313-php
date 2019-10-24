@@ -57,3 +57,19 @@ function generateTable(){
         document.getElementById('runTable').innerHTML='';
     }
 }
+
+function registerUser(){
+    var newUser = document.getElementById('newName').value;
+    var newPass = document.getElementById('newPass').value;
+
+    var queryString=`addUser.php?newName=${newUser}&newPass=${newPass}`;
+
+    var xhr = new XMLHttpRequest();
+
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState == 4 && xhr.status == 200) {
+            }
+        }
+        xhr.open("GET", queryString, true);
+        xhr.send();
+}
