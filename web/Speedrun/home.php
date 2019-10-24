@@ -31,13 +31,13 @@
       <br>
       <table>
           <tr>
-            <td><button class='col1' onclick=''>Login</button></td>
+            <td><button class='col1' onclick="document.getElementById('login').style.display='block'">Login</button></td>
             <td><button class='col2' onclick=''>Register</button></td>
           </tr>
       </table>
     </div>
-//////////////////////////////////////////////////////////////////////////////
-    <button onclick="document.getElementById('login').style.display='block'" style="width:auto;">Login</button>
+
+    <?php//<button onclick="document.getElementById('login').style.display='block'" style="width:auto;">Login</button>?>
 
 <div id="login" class="modal">
   
