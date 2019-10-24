@@ -108,7 +108,7 @@ form {
     border: 3px solid #f1f1f1;
   }
   
-  /* Full-width inputs */
+  /* Full-width inputs 
   input[type=text], input[type=password] {
     width: 100%;
     padding: 12px 20px;
@@ -118,7 +118,7 @@ form {
     box-sizing: border-box;
   }
   
-  
+  */
   /* Extra style for the cancel button (red) */
   .cancelbtn {
     width: auto;
