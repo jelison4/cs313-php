@@ -35,7 +35,7 @@
           <td><button class='col2' onclick='submit()'>Register</button></td>
         </tr>
     </table>
-
+    <br>
     </div>
 
     
