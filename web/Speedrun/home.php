@@ -31,7 +31,7 @@
       <br>
       <table>
           <tr>
-            <td><button class='col1' onclick='submit()'>Login</button></td>
+            <td><button class='col1' onclick='submit.php'>Login</button></td>
             <td><button class='col2' onclick='submit()'>Register</button></td>
           </tr>
       </table>
