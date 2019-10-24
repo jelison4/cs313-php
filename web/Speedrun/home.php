@@ -44,7 +44,7 @@
 ?>
 
 
-<form action="action_page.php" method="post">
+<form id='id01' action="action_page.php" method="post">
   <div class="imgcontainer">
     <img src="img_avatar2.png" alt="Avatar" class="avatar">
   </div>
@@ -77,7 +77,7 @@
 class="close" title="Close Modal">&times;</span>
 
   <!-- Modal Content -->
-  <form class="modal-content animate" action="/action_page.php">
+  <form class="modal-content" action="/action_page.php">
     <div class="imgcontainer">
       <img src="img_avatar2.png" alt="Avatar" class="avatar">
     </div>
