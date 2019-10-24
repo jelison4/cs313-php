@@ -62,7 +62,7 @@ function registerUser(){
     var newUser = document.getElementById('newName').value;
     var newPass = document.getElementById('newPass').value;
 
-    var queryString=`addUser.php?newName=${newUser}&newPass=${newPass}`;
+    var queryString='addUser.php?newName='+newUser+'&newPass='+newPass;
 
     console.log(newUser);
     console.log(newPass);
@@ -74,6 +74,6 @@ function registerUser(){
             if (xhr.readyState == 4 && xhr.status == 200) {
             }
         }
-        xhr.open("GET", queryString, true);
+        xhr.open("POST", queryString, true);
         xhr.send();
 }

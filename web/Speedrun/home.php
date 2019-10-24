@@ -76,7 +76,7 @@
         </div>
     
         <div class="container" style="background-color:#f1f1f1">
-          <button type="button" onclick='registerUser()'>Register</button>
+          <button type="submit">Register</button>
           <button type="button" onclick="document.getElementById('register').style.display='none'" class="cancelbtn">Cancel</button>
         </div>
       </form>
