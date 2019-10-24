@@ -2,8 +2,8 @@
   require 'databaseConnect.php';
   $db=get_db();
 
-  $name=$_POST['newName'];
-  $password=$_POST['newPass'];
+  $name=$_POST['uname'];
+  $password=$_POST['password'];
 
   $query="INSERT INTO users (username, password, admin) VALUES ("."'".$name."'".", '".$password."', False);";
 
