@@ -2,7 +2,7 @@
     require 'databaseConnect.php';
     $db=get_db();
   
-    $name=$_POST['uname'];
+    $name=$_GET['uname'];
     $nameTaken=FALSE;
 
     $nameQuery='SELECT username FROM users;';
