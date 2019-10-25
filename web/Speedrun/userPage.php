@@ -1,8 +1,8 @@
 <?php
   require 'databaseConnect.php';
   $db=get_db();
-
   $name=$_POST['uname'];
+
   $nameTaken=FALSE;
 
   $nameQuery='SELECT username FROM users;';
@@ -14,8 +14,10 @@
      $nameTaken=TRUE;
     } 
   }
-function userTable(){
+
+  function userTable(){
     $db=get_db();
+    $name=$_POST['uname'];
     $tableQuery="SELECT DISTINCT game.title, run.time, category.category_title, platform.name, run.valid FROM users, run, platform, category, game WHERE run.user_id = users.id AND users.username="."'".$name."'"." AND platform_id = platform.id AND run.game_id = game.id AND run.category_id = category.id ORDER BY run.time;";
     $table=$db->query($tableQuery);
      
@@ -28,7 +30,7 @@ function userTable(){
       }
       echo '<tr><td>'.$row['title'].'</td><td>'.formatTime($row['time']).'</td><td>'.$row['category_title'].'</td><td>'.$row['name'].'</td>'.valitity($row['valid']).'</td></tr>';
     }
-}
+  }
   // Trims the leading 0's and :'s
   function formatTime($time){
       $fTime = ltrim($time, "0");
