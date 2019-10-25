@@ -68,4 +68,5 @@ SELECT users.username, game.title, category.category_title, run.time, platform.n
 SELECT DISTINCT run.game_id, game.title FROM run, game WHERE run.game_id = game.id ORDER BY game.title;
 SELECT DISTINCT run.category_id, category.category_title FROM run, category WHERE run.category_id = category.id AND run.game_id=16;
 SELECT DISTINCT users.username, run.time, category.category_title, platform.name, run.valid FROM users, run, platform, category WHERE run.user_id = users.id AND platform_id = platform.id AND run.game_id = 1 AND run.category_id = category.id ORDER BY run.time;
+SELECT DISTINCT game.title, run.time, category.category_title, platform.name, run.valid FROM users, run, platform, category, game WHERE run.user_id = users.id AND users.username='Cadfel' AND platform_id = platform.id AND run.game_id = game.id AND run.category_id = category.id ORDER BY run.time;
 SELECT * from users WHERE username='Cadfel';

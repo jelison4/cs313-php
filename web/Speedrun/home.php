@@ -41,9 +41,10 @@
     <div id="login" class="modal">
       <span onclick="document.getElementById('login').style.display='none'" class="close" title="Close Modal">&times;</span>
     
-      <form class="modal-content background" action="/action_page.php">
+      <form class="modal-content background" action="userPage.php">
     
         <div class="container">
+        <br>
         <h2>Login</h2>
           <label for="uname"><b>Username</b></label>
           <input type="text" placeholder="Enter Username" name="uname" id='uname' required>
@@ -66,6 +67,7 @@
       <form class="modal-content background" action="addUser.php" method="post">
     
         <div class="container">
+          <br>
           <h2>Create New Account</h2>
           <label for="uname"><b>Username</b></label>
           <input type="text" placeholder="Enter Username" name="uname" id='newName' required>

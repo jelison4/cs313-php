@@ -1,37 +1,21 @@
 <?php
-  function addUser(){
+
     require 'databaseConnect.php';
     $db=get_db();
   
     $name=$_POST['uname'];
-    $nameTaken=FALSE;
+    $password=$_POST['password'];
 
-    $nameQuery='SELECT username FROM users;';
-    $statement = $db->query($nameQuery);
+    $infoQuery="SELECT * FROM users WHERE username='".$name."';";
+    $statement = $db->query($infoQuery);
    
-    // Check if the desired username is already taken
-    while ($row = $statement->fetch(PDO::FETCH_ASSOC)){
-        if($row['username']== $name){
-            $nameTaken=TRUE;
-        } 
-    }
-    
-    // Let the user know if the name is taken
-    if($nameTaken){
-        echo "Sorry that username is taken.";
+    $row = $statement->fetch(PDO::FETCH_ASSOC);
+    if(password_verify($password, $row['password'])){
+        $user_id=$row['id'];
     }
     else{
-        // Hash password
-        $password=$_POST['password'];
-        $hash = password_hash($password, PASSWORD_DEFAULT);
-
-        // Write user to database
-        $query="INSERT INTO users (username, password, admin) VALUES ("."'".$name."'".", '".$hash."', False);";
-        $db->query($query);
-
-        echo "Account created";
+        echo "Login Failed";
     }
-  }
 
 ?>
 
