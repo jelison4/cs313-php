@@ -2,7 +2,7 @@
     require 'databaseConnect.php';
     $db=get_db();
   
-    $name=$_GET['uname'];
+    $name=$_POST['uname'];
     $nameTaken=FALSE;
 
     $nameQuery='SELECT username FROM users;';
@@ -20,6 +20,7 @@
         echo "Sorry that username is taken.";
     }
     else{
+        $name=$_POST['uname'];
         // Hash password
         $password=$_POST['password'];
         $hash = password_hash($password, PASSWORD_DEFAULT);
