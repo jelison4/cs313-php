@@ -69,7 +69,7 @@ function verifyLogin(){
         xhr.onreadystatechange = function () {
             if (xhr.readyState == 4 && xhr.status == 200) {
                 console.log(xhr.responseText);
-                if(xhr.responseText){
+                if(xhr.responseText==1){
                     console.log("it worked??");
                     return true;
                 }
