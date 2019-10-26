@@ -11,7 +11,7 @@
     $title=0;
     while ($row = $table->fetch(PDO::FETCH_ASSOC)){
       if($title==0){
-          echo '<tr><th colspan=5><h2>Your Submissions</h2></th></tr>';
+          echo '<tr><th colspan=5><h2>'.$_SESSION['uname']. "'s Submissions</h2></th></tr>";
           echo '<tr><th>Game</th><th>Time</th><th>Category</th><th>Platform</th><th>Validity</th></tr>';
           $title=1;
       }
