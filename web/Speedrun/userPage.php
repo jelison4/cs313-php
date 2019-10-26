@@ -58,7 +58,10 @@
     
     <table>
       <?php userTable(); ?>
-      <tr><td colspan='5'><form action='submit.php' method='post'><button type="submit">Submit Run</button></form></td></tr>
+      <tr>
+        <td colspan='3'><form action='home.php' method='post'><button type="submit">Return to Leaderboard</button></form></td>
+        <td colspan='2'><form action='submit.php' method='post'><button type="submit">Submit Run</button></form></td>
+      </tr>
     </table>
     
     </div>
