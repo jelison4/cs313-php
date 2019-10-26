@@ -1,8 +1,8 @@
 <?php 
     session_start();
 
-    $name=$_POST['uname'];
-    $password=$_POST['password'];
+    $name=$_GET['uname'];
+    $password=$_GET['password'];
     $passQuery=$db->query("SELECT password FROM users WHERE username='".$name."'".";");
     $hashPass=$passQuery->fetch(PDO::FETCH_ASSOC);
 
