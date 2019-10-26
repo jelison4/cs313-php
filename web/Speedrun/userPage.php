@@ -60,7 +60,7 @@
     
     <table>
       <?php userTable(); ?>
-      <tr><td colspan='5'><form action='submit.php'><button type="submit">Submit Run</button></form></td></tr>
+      <tr><td colspan='5'><form action='submit.php' method='post'><button type="submit">Submit Run</button></form></td></tr>
     </table>
     
     </div>
