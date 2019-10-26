@@ -4,6 +4,7 @@
   $db=get_db();
 
   echo $_SESSION['name'];
+  echo 'is this working';
 
   function userTable(){
     $db=get_db();
