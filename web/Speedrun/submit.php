@@ -34,7 +34,7 @@
         <form>
             <table>
                 <tr><td class='col1'>Time:</td><td class='col2'><input type='text' id='time' required></td></tr>
-                <tr><td class='col1'>Game:</td><td class='col2'><select id='gameSelect' onChange='generateCatDropdown()'><option value='0'>Select a Game</option><?php //generateGameDropdown(); ?></select></td></tr>
+                <tr><td class='col1'>Game:</td><td class='col2'><select id='gameSelect' onChange='generateCatDropdown()'><option value='0'>Select a Game</option><?php generateGameDropdown(); ?></select></td></tr>
                 <tr><td class='col1'>Run Catagory:</td><td class='col2'><select id='runCategory'></select></td></tr>
                 <tr><td class='col1'>Platform:</td><td class='col2'><select id='platform'><?php generatePlatformDropdown(); ?></select></td></tr>
                 <tr><td colspan="2"><input type="submit"value='Submit'/></td></tr>
