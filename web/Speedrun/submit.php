@@ -1,8 +1,8 @@
 <?php
     session_start();
 
-    require 'databaseConnect.php';
-    require 'dropdowns.php';
+    //require 'databaseConnect.php';
+    //require 'dropdowns.php';
 ?>
 
 <!DOCTYPE html>
