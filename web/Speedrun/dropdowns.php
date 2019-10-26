@@ -1,7 +1,7 @@
 <?php
-require 'databaseConnect.php';
 
 function generateGameDropdown(){
+    require 'databaseConnect.php';
     $db = get_db();
     $gameQuery='SELECT DISTINCT run.game_id, game.title FROM run, game WHERE run.game_id = game.id ORDER BY game.title';
     $statement = $db->query($gameQuery);
@@ -12,6 +12,7 @@ function generateGameDropdown(){
 }
 
 function generatePlatformDropdown(){
+    require 'databaseConnect.php';
     $db = get_db();
     $gameQuery='SELECT * FROM platform';
     $statement = $db->query($gameQuery);
