@@ -63,17 +63,12 @@ function verifyLogin(){
     var upass=document.getElementById('password').value;
 
     var loginCorrect=false;
-
     var queryString = 'login.php?uname=' + uname + '&password=' + upass;
    
-    console.log(queryString);
-
     var xhr = new XMLHttpRequest();
 
     xhr.onreadystatechange = function () {
-        if (xhr.readyState == 4 && xhr.status == 200) {
-            console.log(xhr.responseText);
-            
+        if (xhr.readyState == 4 && xhr.status == 200) {            
             if(xhr.responseText==1){
                 loginCorrect = true;
             }
@@ -81,8 +76,6 @@ function verifyLogin(){
     }
     xhr.open("GET", queryString, false);
     xhr.send();
-
-    console.log(loginCorrect);
 
     return loginCorrect;
 }

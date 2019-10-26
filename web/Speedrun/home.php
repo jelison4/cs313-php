@@ -42,8 +42,7 @@
     <div id="login" class="modal">
       <span onclick="document.getElementById('login').style.display='none'" class="close" title="Close Modal">&times;</span>
     
-      <form class="modal-content background" action="userPage.php" method="post" onsubmit='event.preventDefault(); verifyLogin();'>
-      <!–– action="userPage.php" method="post" -->
+      <form class="modal-content background" onsubmit='event.preventDefault(); verifyLogin();' action="userPage.php" method="post">
     
         <div class="container">
         <br>
