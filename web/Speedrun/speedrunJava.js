@@ -80,6 +80,6 @@ function verifyLogin(){
                 }
             }
         }
-        xhr.open("POST", queryString, true);
+        xhr.open("GET", queryString, true);
         xhr.send();
 }
