@@ -10,22 +10,20 @@
     
     $title=0;
 
-    if($table->fetch()){
-      echo '<tr><th>'.$_SESSION['uname'].'has no submitions</th><tr>';
-    }
-
-    else{
-      while ($row = $table->fetch(PDO::FETCH_ASSOC)){
-        if($title==0){
-          echo '<tr><th colspan=5><h2>'.$_SESSION['uname']. "'s Submissions</h2></th></tr>";
-          echo '<tr><th>Game</th><th>Time</th><th>Category</th><th>Platform</th><th>Validity</th></tr>';
-          $title=1;
-        }
-        echo '<tr><td>'.$row['title'].'</td><td>'.formatTime($row['time']).'</td><td>'.$row['category_title'].'</td><td>'.$row['name'].'</td>'.valitity($row['valid']).'</td></tr>';
+    while ($row = $table->fetch(PDO::FETCH_ASSOC)){
+      if($title==0){
+        echo '<tr><th colspan=5><h2>'.$_SESSION['uname']. "'s Submissions</h2></th></tr>";
+        echo '<tr><th>Game</th><th>Time</th><th>Category</th><th>Platform</th><th>Validity</th></tr>';
+        $title=1;
       }
+      echo '<tr><td>'.$row['title'].'</td><td>'.formatTime($row['time']).'</td><td>'.$row['category_title'].'</td><td>'.$row['name'].'</td>'.valitity($row['valid']).'</td></tr>';
     }
     
+    if($table==0){
+      echo '<tr><th>'.$_SESSION['uname'].'has no submitions</th><tr>';
+    }
   }
+  
   // Trims the leading 0's and :'s
   function formatTime($time){
       $fTime = ltrim($time, "0");
