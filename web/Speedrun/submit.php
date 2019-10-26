@@ -23,7 +23,20 @@
         <form>
             <table>
                 <tr><td class='col1'>Time:</td><td class='col2'><input type='text' id='time' required></td></tr>
-                <tr><td class='col1'>Game:</td><td class='col2'><select id='gameSelect' onChange='generateCatDropdown()'><?php echo "FUCK THIS"; generateGameDropdown(); ?></select></td></tr>
+                <tr><td class='col1'>Game:</td><td class='col2'><select id='gameSelect' onChange='generateCatDropdown()'>
+                    
+                <?php 
+                    require 'databaseConnect.php';
+                    $db = get_db();
+                    $gameQuery='SELECT DISTINCT run.game_id, game.title FROM run, game WHERE run.game_id = game.id ORDER BY game.title';
+                    $statement = $db->query($gameQuery);
+                
+                    while ($row = $statement->fetch(PDO::FETCH_ASSOC)){
+                        echo "<option value=" . $row['game_id']  . ">" . $row['title'] . "</option>";
+                    }
+                ?>
+            
+                   </select></td></tr>
                 <tr><td class='col1'>Run Catagory:</td><td class='col2'><select id='runCategory'></select></td></tr>
                 <tr><td class='col1'>Platform:</td><td class='col2'><select id='platform'><?php generatePlatformDropdown(); ?></select></td></tr>
                 <tr><td colspan="2"><input type="submit"value='Submit'/></td></tr>
