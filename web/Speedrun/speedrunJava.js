@@ -73,7 +73,7 @@ function verifyLogin(){
                     return true;
                 }
                 else{
-                    alert('Login failed.  Incorrect username or password.')
+                    alert('Login failed.  Incorrect username or password.');
                     return false;
                 }
             }
