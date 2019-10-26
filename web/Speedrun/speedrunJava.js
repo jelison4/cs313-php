@@ -75,6 +75,7 @@ function verifyLogin(){
                 }
                 else{
                     alert('Login failed.  Incorrect username or password.');
+                    console.log("no Luck");
                     return false;
                 }
             }

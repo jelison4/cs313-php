@@ -8,9 +8,9 @@
 
     if(password_verify($password, $hashPass['password'])){
         $_SESSION['uname'] = $name;
-        return true;   
+        echo true;   
     }
     else{
-        return false;
+        echo false;
     }
 ?>
