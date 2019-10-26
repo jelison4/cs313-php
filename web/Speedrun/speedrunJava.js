@@ -62,24 +62,27 @@ function verifyLogin(){
     var uname=document.getElementById('uname').value;
     var upass=document.getElementById('password').value;
 
+    var loginCorrect=false;
+
     var queryString = 'login.php?uname=' + uname + '&password=' + upass;
    
-        var xhr = new XMLHttpRequest();
+    console.log(queryString);
 
-        xhr.onreadystatechange = function () {
-            if (xhr.readyState == 4 && xhr.status == 200) {
-                console.log(xhr.responseText);
-                if(xhr.responseText==1){
-                    console.log("it worked??");
-                    return true;
-                }
-                else{
-                    alert('Login failed.  Incorrect username or password.');
-                    console.log("no Luck");
-                    return false;
-                }
+    var xhr = new XMLHttpRequest();
+
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState == 4 && xhr.status == 200) {
+            console.log(xhr.responseText);
+            
+            if(xhr.responseText==1){
+                loginCorrect = true;
             }
         }
-        xhr.open("GET", queryString, true);
-        xhr.send();
+    }
+    xhr.open("GET", queryString, false);
+    xhr.send();
+
+    console.log(loginCorrect);
+
+    return loginCorrect;
 }
