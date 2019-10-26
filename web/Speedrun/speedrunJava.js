@@ -57,3 +57,27 @@ function generateTable(){
         document.getElementById('runTable').innerHTML='';
     }
 }
+
+function verifyLogin(){
+    var uname=document.getElementById('uname').value;
+    var upass=document.getElementById('password').value;
+
+    var queryString = 'login.php?uname=' + uname + '&password=' + upass;
+   
+        var xhr = new XMLHttpRequest();
+
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState == 4 && xhr.status == 200) {
+                console.log(xhr.responseText);
+                if(xhr.responseText){
+                    return true;
+                }
+                else{
+                    alert('Login failed.  Incorrect username or password.')
+                    return false;
+                }
+            }
+        }
+        xhr.open("POST", queryString, true);
+        xhr.send();
+}

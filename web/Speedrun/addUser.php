@@ -1,4 +1,5 @@
 <?php
+    session_start();
 
     require 'databaseConnect.php';
     $db=get_db();

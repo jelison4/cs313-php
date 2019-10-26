@@ -1,19 +1,11 @@
 <?php
+  session_start();
   require 'databaseConnect.php';
   $db=get_db();
-  $name=$_POST['uname'];
-  $password=$_POST['password'];
-  $passQuery=$db->query("SELECT password FROM users WHERE username='".$name."'".";");
-  $hashPass=$passQuery->fetch(PDO::FETCH_ASSOC);
-
-  if(password_verify($password, $hashPass['password'])){
-    echo "It works!";
-  }
 
   function userTable(){
     $db=get_db();
-    $name=$_POST['uname'];
-    $tableQuery="SELECT DISTINCT game.title, run.time, category.category_title, platform.name, run.valid FROM users, run, platform, category, game WHERE run.user_id = users.id AND users.username="."'".$name."'"." AND platform_id = platform.id AND run.game_id = game.id AND run.category_id = category.id ORDER BY run.time;";
+    $tableQuery="SELECT DISTINCT game.title, run.time, category.category_title, platform.name, run.valid FROM users, run, platform, category, game WHERE run.user_id = users.id AND users.username="."'".$_SESSION['name']."'"." AND platform_id = platform.id AND run.game_id = game.id AND run.category_id = category.id ORDER BY run.time;";
     $table=$db->query($tableQuery);
      
     $title=0;
@@ -64,7 +56,10 @@
 
     <div class=background>
     
-    <table> <?php userTable(); ?> </table>
+    <table>
+      <?php userTable(); ?>
+      <tr><td colspan='5'><form action='submit.php'><button type="submit">Submit Run</button></form></td></tr>
+    </table>
     
     </div>
 
