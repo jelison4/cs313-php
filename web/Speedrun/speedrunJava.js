@@ -77,5 +77,10 @@ function verifyLogin(){
     xhr.open("GET", queryString, false);
     xhr.send();
 
-    return loginCorrect;
+    if(loginCorrect){
+        document.forms['loginForm'].submit();
+    }
+    else{
+        alert('Login failed.  Please double check your username and password.');
+    }
 }
