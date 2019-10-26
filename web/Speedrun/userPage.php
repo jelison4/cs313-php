@@ -3,7 +3,8 @@
   $db=get_db();
   $name=$_POST['uname'];
   $password=$_POST['password'];
-  $hashPass=$db->query("SELECT password FROM users WHERE username='".$name."'".";");
+  $passQuery=$db->query("SELECT password FROM users WHERE username='".$name."'".";");
+  $hashPass=$passQuery->fetch(PDO::FETCH_ASSOC);
 
   if(password_verify($password, $hashPass['password'])){
     echo "It works!";
