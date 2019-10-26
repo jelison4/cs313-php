@@ -3,6 +3,8 @@
   require 'databaseConnect.php';
   $db=get_db();
 
+  echo $_SESSION['name'];
+
   function userTable(){
     $db=get_db();
     $tableQuery="SELECT DISTINCT game.title, run.time, category.category_title, platform.name, run.valid FROM users, run, platform, category, game WHERE run.user_id = users.id AND users.username="."'".$_SESSION['name']."'"." AND platform_id = platform.id AND run.game_id = game.id AND run.category_id = category.id ORDER BY run.time;";
