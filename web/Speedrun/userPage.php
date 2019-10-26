@@ -8,12 +8,13 @@
     $tableQuery="SELECT DISTINCT game.title, run.time, category.category_title, platform.name, run.valid FROM users, run, platform, category, game WHERE run.user_id = users.id AND users.username="."'".$_SESSION['uname']."'"." AND platform_id = platform.id AND run.game_id = game.id AND run.category_id = category.id ORDER BY run.time;";
     $table=$db->query($tableQuery);
     
-    if(mysql_num_rows($table) == 0){
+    $title=0;
+
+    if($table->fetch()){
       echo '<tr><th>'.$_SESSION['uname'].'has no submitions</th><tr>';
     }
 
     else{
-      $title=0;
       while ($row = $table->fetch(PDO::FETCH_ASSOC)){
         if($title==0){
           echo '<tr><th colspan=5><h2>'.$_SESSION['uname']. "'s Submissions</h2></th></tr>";
