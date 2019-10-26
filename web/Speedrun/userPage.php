@@ -19,7 +19,7 @@
       echo '<tr><td>'.$row['title'].'</td><td>'.formatTime($row['time']).'</td><td>'.$row['category_title'].'</td><td>'.$row['name'].'</td>'.valitity($row['valid']).'</td></tr>';
     }
     
-    if($table==0){
+    if($title==0){
       echo '<tr><th>'.$_SESSION['uname'].'has no submitions</th><tr>';
     }
   }
