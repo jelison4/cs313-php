@@ -20,7 +20,7 @@
     }
     
     if($title==0){
-      echo '<tr><th style="text-align:center;">'.$_SESSION['uname'].' has no submitions</th><tr>';
+      echo '<tr><th style="text-align:center;"> You do not have any submitions</th><tr>';
     }
   }
   
