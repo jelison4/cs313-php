@@ -4,7 +4,6 @@
   $name=$_POST['uname'];
   $password=$_POST['password'];
   $hashPass=$db->query("SELECT password FROM users WHERE username='".$name."'".";");
-  echo $hashPass['password'];
 
   if(password_verify($password, $hashPass['password'])){
     echo "It works!";
