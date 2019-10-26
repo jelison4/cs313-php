@@ -2,17 +2,11 @@
   require 'databaseConnect.php';
   $db=get_db();
   $name=$_POST['uname'];
+  $password=$_POST['password'];
+  $hashPass=$db->query("SELECT password FROM users WHERE username='".$name."'".";");
 
-  $nameTaken=FALSE;
-
-  $nameQuery='SELECT username FROM users;';
-  $statement = $db->query($nameQuery);
- 
-  // Check if the desired username is already taken
-  while ($row = $statement->fetch(PDO::FETCH_ASSOC)){
-    if($row['username']== $name){
-     $nameTaken=TRUE;
-    } 
+  if(password_verify($password, $hashPass)){
+    echo "It works!";
   }
 
   function userTable(){
