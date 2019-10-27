@@ -29,7 +29,7 @@ function generateCatDropdown(){
                 categorys = JSON.parse(xhr.responseText);
 
                 var categoryDropdown = null;
-                
+
                 categorys.forEach(element => {
                     if(categoryDropdown==null){
                         categoryDropdown = "<option value=" + element.id + ">" + element.name + "</option>";
@@ -40,7 +40,6 @@ function generateCatDropdown(){
                 });
 
                 document.getElementById('runCategory').innerHTML = categoryDropdown;
-                generateTable();
             }
         }
         xhr.open("GET", queryString, false);
