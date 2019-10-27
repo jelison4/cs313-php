@@ -1,7 +1,7 @@
 <?php
   require 'databaseConnect.php';
   session_start();
-  //$db=get_db();
+  $db=get_db();
 
   $user_id=getUserID();
   $game_id=$_POST['game_id'];
@@ -11,10 +11,10 @@
 
   echo $_SESSION['uname']."<br>".$user_id."<br>".$game_id."<br>".$plat_id."<br>".$time."<br>".$cat_id."<br>";
     
-  $query="INSERT INTO run (user_id, game_id, platform_id, time, valid, category_id) VALUES ($user_id, $game_id, $plat_id,"."'". $time."'".", false, $cat_id);";
+  $insertQuery="INSERT INTO run (user_id, game_id, platform_id, time, valid, category_id) VALUES ($user_id, $game_id, $plat_id,"."'". $time."'".", false, $cat_id);";
   echo $query;
 
-  //$db->query($query);
+  $db->query($insertQuery);
 
   function getUserID(){
     $idQuery="SELECT id FROM users WHERE username="."'".$_SESSION['uname']."';";
