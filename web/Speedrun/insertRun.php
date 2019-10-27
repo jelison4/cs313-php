@@ -22,9 +22,7 @@
 
     $statement = $db->query($idQuery);
     $row = $statement->fetch(PDO::FETCH_ASSOC);
-    
-    echo $row['id'];
-
+   
     return $row['id'];
   }
   
