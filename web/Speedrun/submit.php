@@ -24,7 +24,15 @@
                 <tr><td class='col1'>Time:</td><td class='col2'><input type='text' id='time' required></td></tr>
                 <tr><td class='col1'>Game:</td><td class='col2'><select id='gameSelect' onChange='generateCatDropdown()'><option value='0'>Select a Game</option> <?php generateGameDropdown(); ?> </select></td></tr>
                 <tr><td class='col1'>Run Catagory:</td><td class='col2'><select id='runCategory'></select></td></tr>
-                <tr><td class='col1'>Platform:</td><td class='col2'><select id='platform'> <?php generatePlatformDropdown(); ?> </select></td></tr>
+                <tr><td class='col1'>Platform:</td><td class='col2'>
+                    <select id='platform'>
+                        <option value='1'>PC</option>
+                        <option value='2'>Playstation 4</option>
+                        <option value='3'>Xbox One</option>
+                        <option value='4'>Nintendo Switch</option>
+                        <option value='5'>Nintendo 64</option>
+                        <option value='6'>Super Nintendo</option>
+                    </select></td></tr>
                 <tr><td colspan="2"><input type="submit"value='Submit'/></td></tr>
             </table>
         </form>
