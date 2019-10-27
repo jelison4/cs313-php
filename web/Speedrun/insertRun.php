@@ -9,12 +9,8 @@
   $time=$_POST['time'];
   $cat_id=$_POST['cat_id'];
 
-  echo $user_id."<br>";
-  echo $game_id."<br>";
-  echo $plat_id."<br>";
-  echo $time."<br>";
-  echo $cat_id."<br>";
-  
+  echo $_SESSION['uname']."<br>".$user_id."<br>".$game_id."<br>".$plat_id."<br>".$time."<br>".$cat_id."<br>";
+    
 /*
   $query="INSERT INTO run (user_id, game_id, platform_id, time, valid, category_id) VALUES ($user_id, $game_id, $plat_id, $time, 0, $cat_id);";
 
