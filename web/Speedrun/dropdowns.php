@@ -10,7 +10,7 @@ function generateGameDropdown(){
         echo "<option value=" . $row['game_id']  . ">" . $row['title'] . "</option>";
     }
 }
-
+/*
 function generateCategoryDropdown(){
     require 'databaseConnect.php';
     $db = get_db();
@@ -21,12 +21,12 @@ function generateCategoryDropdown(){
         echo "<option value=" . $row['game_id']  . ">" . $row['title'] . "</option>";
     }
 }
-
+*/
 function generatePlatformDropdown(){
     require 'databaseConnect.php';
     $db = get_db();
-    $gameQuery='SELECT * FROM platform;';
-    $statement = $db->query($gameQuery);
+    //$platformQuery='SELECT * FROM platform;';
+    $statement = $db->query('SELECT * FROM platform;');
 
     while ($row = $statement->fetch(PDO::FETCH_ASSOC)){
         echo "<option value=" . $row['id']  . ">" . $row['name'] . "</option>";
