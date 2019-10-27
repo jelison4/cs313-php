@@ -14,7 +14,7 @@
   $status=$db->query($query);
 
   if($status){
-    echo "Update sucessfull.";
+    echo "Update sucessful.";
   }
   else{
     echo "Something got fucked up.";
@@ -27,6 +27,8 @@
     $statement = $db->query($idQuery);
     $row = $statement->fetch(PDO::FETCH_ASSOC);
     
+    echo $row['id'];
+
     return $row['id'];
   }
 ?>
