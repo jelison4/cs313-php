@@ -9,13 +9,13 @@
   $time=$_POST['time'];
   $cat_id=$_POST['cat_id'];
 
-  echo $_SESSION['uname']."<br>".$user_id."<br>".$game_id."<br>".$plat_id."<br>".$time."<br>".$cat_id."<br>";
+  //echo $_SESSION['uname']."<br>".$user_id."<br>".$game_id."<br>".$plat_id."<br>".$time."<br>".$cat_id."<br>";
     
-  $query="INSERT INTO run (user_id, game_id, platform_id, time, valid, category_id) VALUES ($user_id, $game_id, $plat_id,"."'". $time."'".", 0, $cat_id);";
-  echo $query;
-/*
+  $query="INSERT INTO run (user_id, game_id, platform_id, time, valid, category_id) VALUES ($user_id, $game_id, $plat_id,"."'". $time."'".", false, $cat_id);";
+  //echo $query;
+
   $db->query($query);
-*/
+
   function getUserID(){
     $idQuery="SELECT id FROM users WHERE username="."'".$_SESSION['uname']."';";
     $db=get_db();
