@@ -26,10 +26,10 @@ function generatePlatformDropdown(){
     require 'databaseConnect.php';
     $db = get_db();
     //$platformQuery='SELECT * FROM platform;';
-    $statement = $db->query('SELECT * FROM platform;');
+    $platStatement = $db->query('SELECT * FROM platform;');
 
-    while ($row = $statement->fetch(PDO::FETCH_ASSOC)){
-        echo "<option value=" . $row['id']  . ">" . $row['name'] . "</option>";
+    while ($platRow = $platStatement->fetch(PDO::FETCH_ASSOC)){
+        echo "<option value=" . $platRow['id']  . ">" . $platRow['name'] . "</option>";
     }
 }
 ?>
