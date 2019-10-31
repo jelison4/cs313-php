@@ -1,7 +1,7 @@
 <?php
   require 'databaseConnect.php';
   session_start();
-  $db=get_db();
+  db=get_db();
 
   $user_id=getUserID();
   $game_id=$_POST['game_id'];
