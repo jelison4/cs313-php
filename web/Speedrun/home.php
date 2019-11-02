@@ -1,6 +1,15 @@
 <?php 
   session_start();
   require "dropdowns.php";
+
+  function loginbutton(){
+    if(isset($_SESSION['uname'])){
+      echo "<td><button class='col1' onclick=".'"window.location.href='."'userPage.php'".'"'.">Profile</button></td>";
+    }
+    else{
+      echo "<button class='col1' onclick=".'"'."document.getElementById('login').style.display='block'".'"'.">Login</button>";
+    }
+  }
 ?>
 
 <!DOCTYPE html>
@@ -32,7 +41,7 @@
       <br>
       <table>
           <tr>
-            <td><button class='col1' onclick="document.getElementById('login').style.display='block'">Login</button></td>
+            <td><?php loginbutton() ?></td>
             <td><button class='col2' onclick="document.getElementById('register').style.display='block'">Register</button></td>
           </tr>
       </table>
