@@ -88,3 +88,7 @@ function verifyLogin(){
 function removeRun(runID){
     console.log(runID);
 }
+
+function validateRun(runID){
+    console.log(runID);
+}

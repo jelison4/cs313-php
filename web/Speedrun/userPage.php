@@ -3,6 +3,37 @@
   require 'databaseConnect.php';
   $db=get_db();
 
+  function displayTable(){
+    $db=get_db();
+    $adminQuery="SELECT admin FROM users WHERE username=".$_SESSION['uname'].";";
+    $isAdmin=$db->query($adminQuery);
+    $isAdmin->fetch(PDO::FETCH_ASSOC);
+
+    if($isAdmin['admin']){
+      adminTable();
+    }
+    else{
+      userTable();
+    }
+  }
+
+  function adminTable(){
+    $db=get_db();
+    $tableQuery="SELECT DISTINCT run.id, game.title, run.time, category.category_title, platform.name, run.valid FROM users, run, platform, category, game WHERE run.user_id = users.id AND valid = false AND platform_id = platform.id AND run.game_id = game.id AND run.category_id = category.id ORDER BY run.time;";
+    $adminTable=$db->query($tableQuery);
+
+    $title=0;
+
+    while ($row = $adminTable->fetch(PDO::FETCH_ASSOC)){
+      if($title==0){
+        echo '<tr><th colspan=6><h2>'.$_SESSION['uname']. "'s Submissions</h2></th></tr>";
+        echo '<tr><th>Game</th><th>Time</th><th>Category</th><th>Platform</th><th>Validity</th></tr>';
+        $title=1;
+      }
+      echo '<tr><td>'.$row['title'].'</td><td>'.formatTime($row['time']).'</td><td>'.$row['category_title'].'</td><td>'.$row['name'].'</td>'.valitity($row['valid']).'</td><td><button class="cancelbtn" onclick=validateRun('.$row['id'].')>Validate</button></td></tr>';
+    }
+  }
+
   function userTable(){
     $db=get_db();
     $tableQuery="SELECT DISTINCT run.id, game.title, run.time, category.category_title, platform.name, run.valid FROM users, run, platform, category, game WHERE run.user_id = users.id AND users.username="."'".$_SESSION['uname']."'"." AND platform_id = platform.id AND run.game_id = game.id AND run.category_id = category.id ORDER BY run.time;";
@@ -63,7 +94,7 @@
     <div class=background>
     
     <table>
-      <?php userTable(); ?>
+      <?php displayTable(); ?>
       <tr>
         <td colspan='3' class='col1'><button onclick="window.location.href='home.php'">Return to Leaderboard</button></td>
         <td colspan='3' class='col2'><button onclick="window.location.href='submit.php'">Submit Run</button></td>
