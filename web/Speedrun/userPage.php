@@ -11,7 +11,7 @@
 
     if($isAdmin['admin']){
       $table = adminTable();
-      echo $table;
+      print $table;
     }
     else{
       userTable();
