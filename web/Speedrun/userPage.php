@@ -27,8 +27,6 @@
     $adminTable=$db->query($tableQuery);
 
     $title=0;
-    
-    $table=null;
 
     while ($row = $adminTable->fetch(PDO::FETCH_ASSOC)){
       if($title==0){
@@ -37,8 +35,6 @@
       }
       echo '<tr><td>'.$row['title'].'</td><td>'.formatTime($row['time']).'</td><td>'.$row['category_title'].'</td><td>'.$row['name'].'</td>'.valitity($row['valid']).'</td><td><button class="cancelbtn" onclick=validateRun('.$row['id'].')>Validate</button></td></tr>';
     }
-
-    print $table;
   }
 
   function userTable(){
