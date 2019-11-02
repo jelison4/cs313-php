@@ -94,7 +94,7 @@
     <div class=background>
     
     <table>
-      <?php userTable(); ?>
+      <?php displayTable(); ?>
       <tr>
         <td colspan='3' class='col1'><button onclick="window.location.href='home.php'">Return to Leaderboard</button></td>
         <td colspan='3' class='col2'><button onclick="window.location.href='submit.php'">Submit Run</button></td>
