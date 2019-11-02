@@ -11,6 +11,7 @@
 
     if($isAdmin['admin']){
       adminTable();
+      echo "gettig to here at least";
     }
     else{
       userTable();
