@@ -10,7 +10,8 @@
     $isAdmin->fetch(PDO::FETCH_ASSOC);
 
     if($isAdmin['admin']){
-      echo adminTable();
+      $table = adminTable();
+      echo $table;
     }
     else{
       userTable();
