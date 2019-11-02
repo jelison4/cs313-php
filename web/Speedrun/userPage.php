@@ -16,7 +16,7 @@
         echo '<tr><th>Game</th><th>Time</th><th>Category</th><th>Platform</th><th>Validity</th></tr>';
         $title=1;
       }
-      echo '<tr><td>'.$row['title'].'</td><td>'.formatTime($row['time']).'</td><td>'.$row['category_title'].'</td><td>'.$row['name'].'</td>'.valitity($row['valid']).'</td></tr>';
+      echo '<tr><td>'.$row['title'].'</td><td>'.formatTime($row['time']).'</td><td>'.$row['category_title'].'</td><td>'.$row['name'].'</td>'.valitity($row['valid']).'</td><td><button></button></td></tr>';
     }
     
     if($title==0){
@@ -66,7 +66,7 @@
       <?php userTable(); ?>
       <tr>
         <td colspan='3'><form action='home.php' method='post'><button type="submit">Return to Leaderboard</button></form></td>
-        <td colspan='2'><form action='submit.php' method='post'><button type="submit">Submit Run</button></form></td>
+        <td colspan='2'><button onclick="window.location.href='submit.php'">Submit Run</button></td>
       </tr>
     </table>
     
