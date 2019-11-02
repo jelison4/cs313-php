@@ -35,8 +35,7 @@
       $table += '<tr><td>'.$row['title'].'</td><td>'.formatTime($row['time']).'</td><td>'.$row['category_title'].'</td><td>'.$row['name'].'</td>'.valitity($row['valid']).'</td><td><button class="cancelbtn" onclick=validateRun('.$row['id'].')>Validate</button></td></tr>';
     }
 
-    return $table;
-    echo $table;
+    print $table;
   }
 
   function userTable(){
