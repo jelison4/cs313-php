@@ -57,7 +57,7 @@
 </head>
 <body>
     <header>
-        <h1>Working title</h2>
+        <h1>Dual Quasars</h1>
     </header>
 
     <div class=background>
