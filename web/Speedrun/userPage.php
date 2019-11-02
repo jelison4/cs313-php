@@ -36,6 +36,7 @@
     }
 
     return $table;
+    echo $table;
   }
 
   function userTable(){
