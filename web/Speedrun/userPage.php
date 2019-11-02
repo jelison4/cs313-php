@@ -9,6 +9,8 @@
     $isAdmin=$db->query($adminQuery);
     $isAdmin->fetch(PDO::FETCH_ASSOC);
 
+    echo $isAdmin['admin'];
+
     $table = adminTable();
     print $table;
 /*
