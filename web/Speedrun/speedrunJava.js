@@ -84,3 +84,7 @@ function verifyLogin(){
         alert('Login failed.  Please double check your username and password.');
     }
 }
+
+function removeRun(){
+    
+}
