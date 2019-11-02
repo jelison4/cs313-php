@@ -9,13 +9,16 @@
     $isAdmin=$db->query($adminQuery);
     $isAdmin->fetch(PDO::FETCH_ASSOC);
 
+    $table = adminTable();
+    print $table;
+/*
     if($isAdmin['admin']){
       $table = adminTable();
       print $table;
     }
     else{
       userTable();
-    }
+    }*/
   }
 
   function adminTable(){
