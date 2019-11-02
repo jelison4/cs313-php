@@ -65,7 +65,7 @@
     <table>
       <?php userTable(); ?>
       <tr>
-        <td colspan='3'><form action='home.php' method='post'><button type="submit">Return to Leaderboard</button></form></td>
+        <td colspan='3'><button onclick="window.location.href='home.php'">Return to Leaderboard</button></td>
         <td colspan='2'><button onclick="window.location.href='submit.php'">Submit Run</button></td>
       </tr>
     </table>
