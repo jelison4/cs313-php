@@ -33,7 +33,7 @@
                         <option value='5'>Nintendo 64</option>
                         <option value='6'>Super Nintendo</option>
                     </select></td></tr>
-                <tr><td><button class='col1' onclick="window.location.href='userPage.php'">Profile</button></td><td><button type="submit">Submit Run</button></td></tr>
+                <tr><td><button class='col1' onclick="window.location.href='userPage.php'">Profile</button></td><td><button class='col2' type="submit">Submit Run</button></td></tr>
             </table>
         </form>
     </div>
