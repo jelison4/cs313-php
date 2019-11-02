@@ -12,7 +12,7 @@
 
     while ($row = $table->fetch(PDO::FETCH_ASSOC)){
       if($title==0){
-        echo '<tr><th colspan=5><h2>'.$_SESSION['uname']. "'s Submissions</h2></th></tr>";
+        echo '<tr><th colspan=6><h2>'.$_SESSION['uname']. "'s Submissions</h2></th></tr>";
         echo '<tr><th>Game</th><th>Time</th><th>Category</th><th>Platform</th><th>Validity</th></tr>';
         $title=1;
       }
@@ -65,8 +65,8 @@
     <table>
       <?php userTable(); ?>
       <tr>
-        <td colspan='3'><button onclick="window.location.href='home.php'">Return to Leaderboard</button></td>
-        <td colspan='2'><button onclick="window.location.href='submit.php'">Submit Run</button></td>
+        <td colspan='3' class='col2'><button onclick="window.location.href='home.php'">Return to Leaderboard</button></td>
+        <td colspan='3' class='col1'><button onclick="window.location.href='submit.php'">Submit Run</button></td>
       </tr>
     </table>
     
