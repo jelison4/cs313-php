@@ -33,7 +33,7 @@
                         <option value='5'>Nintendo 64</option>
                         <option value='6'>Super Nintendo</option>
                     </select></td></tr>
-                <tr><td colspan="2"><input type="submit" value='Submit'/></td></tr>
+                <tr><td colspan="2"><button type="submit">Submit Run</button></td></tr>
             </table>
         </form>
     </div>
