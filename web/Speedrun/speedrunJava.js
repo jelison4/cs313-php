@@ -85,6 +85,6 @@ function verifyLogin(){
     }
 }
 
-function removeRun(){
-    
+function removeRun(runID){
+    console.log(runID);
 }
