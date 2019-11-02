@@ -50,7 +50,7 @@
 <html lang="en-us">
 <head>
   <meta charset="UTF-8">
-  <title>Speed Running!!</title>
+  <title>Dual Quasars</title>
   <link rel="stylesheet" type="text/css" href="speedrunSS.css">
   <script src="speedrunJava.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -65,8 +65,8 @@
     <table>
       <?php userTable(); ?>
       <tr>
-        <td colspan='3' class='col2'><button onclick="window.location.href='home.php'">Return to Leaderboard</button></td>
-        <td colspan='3' class='col1'><button onclick="window.location.href='submit.php'">Submit Run</button></td>
+        <td colspan='3' class='col1'><button onclick="window.location.href='home.php'">Return to Leaderboard</button></td>
+        <td colspan='3' class='col2'><button onclick="window.location.href='submit.php'">Submit Run</button></td>
       </tr>
     </table>
     
