@@ -10,8 +10,7 @@
     $isAdmin->fetch(PDO::FETCH_ASSOC);
 
     if($isAdmin['admin']){
-      adminTable();
-      echo "gettig to here at least";
+      echo adminTable();
     }
     else{
       userTable();
@@ -24,15 +23,18 @@
     $adminTable=$db->query($tableQuery);
 
     $title=0;
+    
+    $table=null;
 
     while ($row = $adminTable->fetch(PDO::FETCH_ASSOC)){
       if($title==0){
-        echo '<tr><th colspan=6><h2>'.$_SESSION['uname']. "'s Submissions</h2></th></tr>";
-        echo '<tr><th>Game</th><th>Time</th><th>Category</th><th>Platform</th><th>Validity</th></tr>';
+        $table='<tr><th colspan=6><h2>'.$_SESSION['uname']. "'s Submissions</h2></th></tr><tr><th>Game</th><th>Time</th><th>Category</th><th>Platform</th><th>Validity</th></tr>";
         $title=1;
       }
-      echo '<tr><td>'.$row['title'].'</td><td>'.formatTime($row['time']).'</td><td>'.$row['category_title'].'</td><td>'.$row['name'].'</td>'.valitity($row['valid']).'</td><td><button class="cancelbtn" onclick=validateRun('.$row['id'].')>Validate</button></td></tr>';
+      $table += '<tr><td>'.$row['title'].'</td><td>'.formatTime($row['time']).'</td><td>'.$row['category_title'].'</td><td>'.$row['name'].'</td>'.valitity($row['valid']).'</td><td><button class="cancelbtn" onclick=validateRun('.$row['id'].')>Validate</button></td></tr>';
     }
+
+    return $table;
   }
 
   function userTable(){
