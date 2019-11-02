@@ -16,7 +16,7 @@
 <html lang="en-us">
 <head>
   <meta charset="UTF-8">
-  <title>Speed Running!!</title>
+  <title>Dual Quasars</title>
   <link rel="stylesheet" type="text/css" href="speedrunSS.css">
   <script src="speedrunJava.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
