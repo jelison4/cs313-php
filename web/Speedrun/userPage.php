@@ -32,10 +32,10 @@
 
     while ($row = $adminTable->fetch(PDO::FETCH_ASSOC)){
       if($title==0){
-        $table='<tr><th colspan=6><h2>'.$_SESSION['uname']. "'s Submissions</h2></th></tr><tr><th>Game</th><th>Time</th><th>Category</th><th>Platform</th><th>Validity</th></tr>";
+        echo'<tr><th colspan=6><h2>'.$_SESSION['uname']. "'s Submissions</h2></th></tr><tr><th>Game</th><th>Time</th><th>Category</th><th>Platform</th><th>Validity</th></tr>";
         $title=1;
       }
-      $table += '<tr><td>'.$row['title'].'</td><td>'.formatTime($row['time']).'</td><td>'.$row['category_title'].'</td><td>'.$row['name'].'</td>'.valitity($row['valid']).'</td><td><button class="cancelbtn" onclick=validateRun('.$row['id'].')>Validate</button></td></tr>';
+      echo '<tr><td>'.$row['title'].'</td><td>'.formatTime($row['time']).'</td><td>'.$row['category_title'].'</td><td>'.$row['name'].'</td>'.valitity($row['valid']).'</td><td><button class="cancelbtn" onclick=validateRun('.$row['id'].')>Validate</button></td></tr>';
     }
 
     print $table;
