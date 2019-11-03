@@ -1,7 +1,7 @@
 <?php
   require 'databaseConnect.php';
   session_start();
-  db=get_db();
+  $db=get_db();
 
   $user_id=getUserID();
   $game_id=$_POST['game_id'];
@@ -22,23 +22,5 @@
    
     return $row['id'];
   }
-  
+  header("Location: userPage.php");
 ?>
-
-<!DOCTYPE html>
-<html lang="en-us">
-<head>
-  <meta charset="UTF-8">
-  <title>Speed Running!!</title>
-  <link rel="stylesheet" type="text/css" href="speedrunSS.css">
-  <script src="speedrunJava.js"></script>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body>
-
-<div class='background'>
-  It worked.
-</div>
-
-</body>
-</html>
