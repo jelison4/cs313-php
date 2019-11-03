@@ -31,7 +31,7 @@
 
     while ($row = $adminTable->fetch(PDO::FETCH_ASSOC)){
       if($title==0){
-        echo'<tr><th colspan=6><h2>'.$_SESSION['uname']. "'s Submissions</h2></th></tr><tr><th>Game</th><th>Time</th><th>Category</th><th>Platform</th><th>Validity</th></tr>";
+        echo'<tr><th colspan=6><h2>Submissions that Need to be Validated</h2></th></tr><tr><th>Game</th><th>Time</th><th>Category</th><th>Platform</th><th>Validity</th></tr>';
         $title=1;
       }
       echo '<tr><td>'.$row['title'].'</td><td>'.formatTime($row['time']).'</td><td>'.$row['category_title'].'</td><td>'.$row['name'].'</td>'.valitity($row['valid']).'</td><td><button class="cancelbtn" onclick=validateRun('.$row['id'].')>Validate</button></td></tr>';
