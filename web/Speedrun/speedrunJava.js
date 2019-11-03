@@ -86,7 +86,19 @@ function verifyLogin(){
 }
 
 function removeRun(runID){
-    console.log(runID);
+    var queryString = 'removeRun.php?runID=' + runID;
+
+    var xhr = new XMLHttpRequest();
+
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState == 4 && xhr.status == 200) {            
+            if(xhr.responseText==1){
+                console.log(xhr.responseText);
+            }
+        }
+    }
+    xhr.open("POST", queryString, false);
+    xhr.send();
 }
 
 function validateRun(runID){
