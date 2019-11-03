@@ -97,13 +97,12 @@ function removeRun(runID){
     }
     xhr.open("get", queryString, true);
     xhr.send();
-    
+
     location.reload();
 }
 
 function validateRun(runID){
     var queryString = 'validateRun.php?runID=' + runID;
-    console.log(queryString);
     var xhr = new XMLHttpRequest();
 
     xhr.onreadystatechange = function () {
@@ -112,4 +111,6 @@ function validateRun(runID){
     }
     xhr.open("get", queryString, true);
     xhr.send();
+
+    location.reload();
 }
