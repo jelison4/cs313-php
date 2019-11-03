@@ -91,9 +91,7 @@ function removeRun(runID){
     var xhr = new XMLHttpRequest();
 
     xhr.onreadystatechange = function () {
-        if (xhr.readyState == 4 && xhr.status == 200) {            
-            console.log(xhr.responseText);
-            console.log("did this work?");
+        if (xhr.readyState == 4 && xhr.status == 200) {
         }
     }
     xhr.open("get", queryString, true);
