@@ -93,6 +93,9 @@ function logout(){
             if(xhr.responseText==1){
                 location.reload();
             }
+            else{
+                console.log("it didn't work")
+            }
         }
     }
     xhr.open("get", 'logout.php', true);
