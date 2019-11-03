@@ -3,7 +3,7 @@
     $db=get_db();
 
     $runID=$_GET['runID'];
-    $sql="DELETE FROM users WHERE id=$runID;";
+    $sql="DELETE FROM users WHERE id=".$runID.";";
 
     if($db->query($sql)){
         echo "Run deleted.";
