@@ -1,4 +1,4 @@
 <?php 
   session_unset();
-  echo 1; 
+  session_destroy();
 ?>
