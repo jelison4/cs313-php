@@ -90,12 +90,7 @@ function logout(){
 
     xhr.onreadystatechange = function () {
         if (xhr.readyState == 4 && xhr.status == 200) {
-            if(xhr.responseText==1){
-                location.reload();
-            }
-            else{
-                console.log("it didn't work")
-            }
+            location.reload();
         }
     }
     xhr.open("get", "logout.php", true);
