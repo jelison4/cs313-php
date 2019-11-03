@@ -6,12 +6,10 @@
   function displayTable(){
     $db=get_db();
     $adminQuery="SELECT admin FROM users WHERE username="."'".$_SESSION['uname']."'".";";
-    $isAdmin=$db->query($adminQuery);
-    $isAdmin->fetch(PDO::FETCH_ASSOC);
+    $admin=$db->query($adminQuery);
+    $isAdmin=$admin->fetch(PDO::FETCH_ASSOC);
 
-    if($isAdmin['admin']){
-      echo "this is working";
-    }
+    echo $isAdmin;
 
     $table = userTable();
     print $table;
