@@ -92,11 +92,13 @@ function removeRun(runID){
 
     xhr.onreadystatechange = function () {
         if (xhr.readyState == 4 && xhr.status == 200) {
-            location.reload();
+            
         }
     }
     xhr.open("get", queryString, true);
     xhr.send();
+    
+    location.reload();
 }
 
 function validateRun(runID){
