@@ -9,17 +9,7 @@
     }else{
       userTable();
     }
-  
-/*
-    $table = userTable();
-    print $table;
 
-    if($isAdmin['admin']){
-      
-    }
-    else{
-      userTable();
-    }*/
   }
 
   function adminTable(){
