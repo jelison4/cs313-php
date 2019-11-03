@@ -87,7 +87,7 @@ function verifyLogin(){
 
 function removeRun(runID){
     var queryString = 'removeRun.php?runID=' + runID;
-
+    console.log(queryString);
     var xhr = new XMLHttpRequest();
 
     xhr.onreadystatechange = function () {
