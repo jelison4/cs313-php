@@ -97,7 +97,7 @@ function removeRun(runID){
             }
         }
     }
-    xhr.open("get", queryString, false);
+    xhr.open("get", queryString, true);
     xhr.send();
 }
 
