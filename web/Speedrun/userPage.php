@@ -7,8 +7,9 @@
     $db=get_db();
     $adminQuery="SELECT admin FROM users WHERE username="."'".$_SESSION['uname']."'".";";
     $admin=$db->query($adminQuery);
-    $isAdmin=$admin->fetch(PDO::FETCH_ASSOC);
-
+    $admin->fetch(PDO::FETCH_ASSOC);
+    $isAdmin=$admin['admin'];
+    
     echo $isAdmin;
 
     $table = userTable();
