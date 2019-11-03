@@ -98,7 +98,7 @@ function logout(){
             }
         }
     }
-    xhr.open("get", 'logout.php', true);
+    xhr.open("get", logout.php, true);
     xhr.send();
 }
 
