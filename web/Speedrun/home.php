@@ -4,7 +4,8 @@
 
   function loginbutton(){
     if(isset($_SESSION['uname'])){
-      echo "<td><button class='col1' onclick=".'"window.location.href='."'userPage.php'".'"'.">Profile</button></td><td><button class='col2'>Logout</button></td>";
+      echo "<td><button class='col1' onclick=".'"window.location.href='."'userPage.php'".'"'.">Profile</button></td>".
+           "<td><button class='col2' onclick=>Logout</button></td>";
     }
     else{
       echo "<td><button class='col1' onclick=".'"'."document.getElementById('login').style.display='block'".'"'.">Login</button></td>".
