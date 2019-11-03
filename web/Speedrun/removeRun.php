@@ -2,7 +2,7 @@
     require 'databaseConnect.php';
     $db=get_db();
 
-    $runID=$_POST['runID'];
+    $runID=$_GET['runID'];
     $sql="DELETE FROM users WHERE id=$runID;";
 
     if($db->query($sql)){
