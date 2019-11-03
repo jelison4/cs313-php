@@ -94,6 +94,7 @@ function removeRun(runID){
         if (xhr.readyState == 4 && xhr.status == 200) {            
             if(xhr.responseText==1){
                 console.log(xhr.responseText);
+                console.log("did this work?");
             }
         }
     }
