@@ -5,7 +5,7 @@
     $runID=$_GET['runID'];
     $sql="DELETE FROM users WHERE id=".$runID.";";
 
-    echo $sql;
+    print $sql;
 
     //$db->query($sql)
 ?>
