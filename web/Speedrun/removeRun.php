@@ -6,4 +6,5 @@
     $sql="DELETE FROM run WHERE id=".$runID.";";
 
     $db->query($sql);
+    header("Location: userPage.php");
 ?>
