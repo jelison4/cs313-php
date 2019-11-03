@@ -3,9 +3,12 @@
     $db=get_db();
 
     $runID=$_GET['runID'];
-    $sql="DELETE FROM users WHERE id=".$runID.";";
+    $sql="DELETE FROM run WHERE id=".$runID.";";
 
-    echo $sql;
-
-    //$db->query($sql)
+    if ($db->query($sql) === TRUE) {
+        echo "Record deleted successfully";
+    }
+    else{
+        echo "Error deleting record" . $db->error;
+    }
 ?>
