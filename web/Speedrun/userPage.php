@@ -4,19 +4,18 @@
   $db=get_db();
 
   function displayTable(){
-    $db=get_db();
-    $adminQuery="SELECT admin FROM users WHERE username="."'".$_SESSION['uname']."'".";";
-    $admin=$db->query($adminQuery);
-    $admin->fetch(PDO::FETCH_ASSOC);
-    $isAdmin=$admin['admin'];
-    
-    echo $isAdmin;
-
+    if($_SESSION['uname']=='admin'){
+      adminTable();
+    }else{
+      userTable();
+    }
+  
+/*
     $table = userTable();
     print $table;
-/*
+
     if($isAdmin['admin']){
-      $table = adminTable();
+      
     }
     else{
       userTable();
