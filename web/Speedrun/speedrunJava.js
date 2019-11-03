@@ -92,10 +92,8 @@ function removeRun(runID){
 
     xhr.onreadystatechange = function () {
         if (xhr.readyState == 4 && xhr.status == 200) {            
-            if(xhr.responseText==1){
-                console.log(xhr.responseText);
-                console.log("did this work?");
-            }
+            console.log(xhr.responseText);
+            console.log("did this work?");
         }
     }
     xhr.open("get", queryString, true);
